@@ -7,6 +7,7 @@
 //
 
 #import "SettingsViewController.h"
+#import "SettingsHelper.h"
 
 @interface SettingsViewController () {
 	
@@ -44,13 +45,19 @@
 }
 
 - (void)initializeSettings {
+	self.photoDurationSlider.value = [SettingsHelper getPhotoDuration];
+	[self photoDurationSliderChanged:self.photoDurationSlider];
 	
+	self.fadeDurationSlider.value = [SettingsHelper getFadeDuration];
+	[self fadeDurationSliderChanged:self.fadeDurationSlider];
 }
 
 #pragma mark - IBActions
 
 - (IBAction)exitSettings:(id)sender {
-	[self dismissViewControllerAnimated:YES completion:NULL];	
+	[SettingsHelper setPhotoDuration:self.photoDurationSlider.value];
+	[SettingsHelper setFadeDuration:self.fadeDurationSlider.value];
+	[self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 #pragma mark - UISlider

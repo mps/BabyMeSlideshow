@@ -7,6 +7,7 @@
 //
 
 #import "SlideshowViewController.h"
+#import "SettingsHelper.h"
 
 @interface SlideshowViewController () <UIAlertViewDelegate> {
 	NSMutableArray *_photos;
@@ -49,7 +50,7 @@
 }
 
 - (void)startTimer {
-    timer = [NSTimer scheduledTimerWithTimeInterval:DEFAULT_PHOTO_DURATION // TODO: allow user to set this timer
+    timer = [NSTimer scheduledTimerWithTimeInterval:[SettingsHelper getPhotoDuration]
                                              target:self
                                            selector:@selector(handleTimer:)
                                            userInfo:nil
@@ -63,7 +64,7 @@
 	
 	UIImage * toImage = [_photos objectAtIndex:currentImage];
 	[UIView transitionWithView:self.view
-					  duration:DEFAULT_FADE_DURATION
+					  duration:[SettingsHelper getFadeDuration]
 					   options:UIViewAnimationOptionTransitionCrossDissolve
 					animations:^{
 						[self setImage:toImage];
