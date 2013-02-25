@@ -38,10 +38,10 @@
 					<object class="IBUIButton" id="482684755">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{177, 34}, {226, 44}}</string>
+						<string key="NSFrame">{{171, 20}, {226, 44}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="1039591732"/>
+						<reference key="NSNextKeyView" ref="707429888"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -49,7 +49,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">Select Photos for Slideshow</string>
-						<object class="NSColor" key="IBUIHighlightedTitleColor" id="886706391">
+						<object class="NSColor" key="IBUIHighlightedTitleColor" id="746670683">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
 						</object>
@@ -57,24 +57,47 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
-						<object class="NSColor" key="IBUINormalTitleShadowColor" id="455998156">
+						<object class="NSColor" key="IBUINormalTitleShadowColor" id="821483635">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="119404874">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="943571424">
 							<int key="type">2</int>
 							<double key="pointSize">15</double>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="897327278">
+						<object class="NSFont" key="IBUIFont" id="497417131">
 							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">15</double>
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
-					<object class="IBUIButton" id="1039591732">
+					<object class="IBUIButton" id="707429888">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{218, 113}, {84, 44}}</string>
+						<string key="NSFrame">{{146, 86}, {277, 44}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="747712476"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<int key="IBUIButtonType">1</int>
+						<string key="IBUINormalTitle">Use Previous Photos for Slideshow</string>
+						<reference key="IBUIHighlightedTitleColor" ref="746670683"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="821483635"/>
+						<reference key="IBUIFontDescription" ref="943571424"/>
+						<reference key="IBUIFont" ref="497417131"/>
+					</object>
+					<object class="IBUIButton" id="747712476">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{242, 210}, {84, 44}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -84,14 +107,14 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">Settings</string>
-						<reference key="IBUIHighlightedTitleColor" ref="886706391"/>
+						<reference key="IBUIHighlightedTitleColor" ref="746670683"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
-						<reference key="IBUINormalTitleShadowColor" ref="455998156"/>
-						<reference key="IBUIFontDescription" ref="119404874"/>
-						<reference key="IBUIFont" ref="897327278"/>
+						<reference key="IBUINormalTitleShadowColor" ref="821483635"/>
+						<reference key="IBUIFontDescription" ref="943571424"/>
+						<reference key="IBUIFont" ref="497417131"/>
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {568, 300}}</string>
@@ -153,9 +176,17 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">showSettingsButton</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="1039591732"/>
+						<reference key="destination" ref="747712476"/>
 					</object>
 					<int key="connectionID">18</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">usePreviousPhotosButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="707429888"/>
+					</object>
+					<int key="connectionID">22</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -169,11 +200,20 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">showSettings:</string>
-						<reference key="source" ref="1039591732"/>
+						<reference key="source" ref="747712476"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">19</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">usePreviousPhotosForSlideshow:</string>
+						<reference key="source" ref="707429888"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">23</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -200,7 +240,8 @@
 						<reference key="object" ref="774585933"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="482684755"/>
-							<reference ref="1039591732"/>
+							<reference ref="747712476"/>
+							<reference ref="707429888"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -211,7 +252,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">17</int>
-						<reference key="object" ref="1039591732"/>
+						<reference key="object" ref="747712476"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">20</int>
+						<reference key="object" ref="707429888"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 				</array>
@@ -222,6 +268,7 @@
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="17.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="20.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
@@ -229,7 +276,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">19</int>
+			<int key="maxID">23</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -239,6 +286,7 @@
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="selectPhotosForSlideshow:">id</string>
 						<string key="showSettings:">id</string>
+						<string key="usePreviousPhotosForSlideshow:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="selectPhotosForSlideshow:">
@@ -249,10 +297,15 @@
 							<string key="name">showSettings:</string>
 							<string key="candidateClassName">id</string>
 						</object>
+						<object class="IBActionInfo" key="usePreviousPhotosForSlideshow:">
+							<string key="name">usePreviousPhotosForSlideshow:</string>
+							<string key="candidateClassName">id</string>
+						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="selectPhotosButton">UIButton</string>
 						<string key="showSettingsButton">UIButton</string>
+						<string key="usePreviousPhotosButton">UIButton</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="selectPhotosButton">
@@ -261,6 +314,10 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="showSettingsButton">
 							<string key="name">showSettingsButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="usePreviousPhotosButton">
+							<string key="name">usePreviousPhotosButton</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
 					</dictionary>

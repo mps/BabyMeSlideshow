@@ -17,6 +17,7 @@
 }
 
 @property (nonatomic) IBOutlet UIButton *selectPhotosButton;
+@property (nonatomic) IBOutlet UIButton *usePreviousPhotosButton;
 @property (nonatomic) IBOutlet UIButton *showSettingsButton;
 @property (nonatomic) WSAssetPickerController *picker;
 
@@ -34,9 +35,7 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-	if ([self hasPhotos]) {
-		// enable start slideshow w/ previous photos.
-	}
+	self.usePreviousPhotosButton.hidden = ![self hasPhotos];
 }
 
 #pragma mark - Methods
@@ -77,6 +76,12 @@
 - (IBAction)selectPhotosForSlideshow:(id)sender {
 	self.picker = [[WSAssetPickerController alloc] initWithDelegate:self];
 	[self presentModalViewController:self.picker animated:YES];
+}
+
+- (IBAction)usePreviousPhotosForSlideshow:(id)sender {
+	if ([self hasPhotos]) {
+		[self showSlideshow];
+	}
 }
 
 - (IBAction)showSettings:(id)sender {
