@@ -11,6 +11,7 @@
 #import "SettingsViewController.h"
 #import "SlideshowViewController.h"
 #import <AssetsLibrary/ALAsset.h>
+#import "SVProgressHUD.h"
 
 @interface ViewController ()<WSAssetPickerControllerDelegate> {
 	NSArray *_selectedPhotos;
@@ -68,6 +69,7 @@
 
 - (void)showSlideshow {	
 	SlideshowViewController *slideshow = [[SlideshowViewController alloc] initWithPhotos:[_selectedPhotos mutableCopy]];
+	[self hideProgress];
 	[self presentModalViewController:slideshow animated:YES];
 }
 
@@ -97,6 +99,8 @@
 }
 
 - (void)assetPickerController:(WSAssetPickerController *)sender didFinishPickingMediaWithAssets:(NSArray *)assets {
+	[self showProgress];
+	
     // Hang on to the picker to avoid ALAssetsLibrary from being released (see note below).
     self.picker = sender;
 	
@@ -113,6 +117,16 @@
         // Release the picker.
         [weakSelf setPicker:nil];
     }];
+}
+
+#pragma mark - SVProgressHUD
+
+- (void)showProgress {
+	[SVProgressHUD showWithStatus:@"Loading Slideshow..."];
+}
+
+- (void)hideProgress {
+	[SVProgressHUD dismiss];
 }
 
 @end
