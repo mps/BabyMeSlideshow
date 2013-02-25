@@ -12,4 +12,6 @@
 
 - (IBAction)selectPhotosForSlideshow:(id)sender;
 
+- (IBAction)showSettings:(id)sender;
+
 @end

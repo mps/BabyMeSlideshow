@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "WSAssetPicker.h"
+#import "SettingsViewController.h"
 #import "SlideshowViewController.h"
 #import <AssetsLibrary/ALAsset.h>
 
@@ -16,6 +17,7 @@
 }
 
 @property (nonatomic) IBOutlet UIButton *selectPhotosButton;
+@property (nonatomic) IBOutlet UIButton *showSettingsButton;
 @property (nonatomic) WSAssetPickerController *picker;
 
 @end
@@ -48,6 +50,12 @@
 - (IBAction)selectPhotosForSlideshow:(id)sender {
 	self.picker = [[WSAssetPickerController alloc] initWithDelegate:self];
 	[self presentModalViewController:self.picker animated:YES];
+}
+
+- (IBAction)showSettings:(id)sender {
+	SettingsViewController *settings = [[SettingsViewController alloc] init];
+	[self presentModalViewController:settings animated:YES];
+	
 }
 
 #pragma mark - WSAssetPickerControllerDelegate
@@ -94,6 +102,5 @@
         [weakSelf setPicker:nil];
     }];
 }
-
 
 @end

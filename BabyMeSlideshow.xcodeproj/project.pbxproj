@@ -30,6 +30,8 @@
 		6959700A16DAE3780021868B /* WSAssetViewSelectionIndicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6959700816DAE3780021868B /* WSAssetViewSelectionIndicator@2x.png */; };
 		6959701016DAE4FC0021868B /* SlideshowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6959700E16DAE4FC0021868B /* SlideshowViewController.m */; };
 		6959701116DAE4FC0021868B /* SlideshowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6959700F16DAE4FC0021868B /* SlideshowViewController.xib */; };
+		69E41EC716DBAC1B00C27C9D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E41EC516DBAC1B00C27C9D /* SettingsViewController.m */; };
+		69E41EC816DBAC1B00C27C9D /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E41EC616DBAC1B00C27C9D /* SettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,9 @@
 		6959700D16DAE4FC0021868B /* SlideshowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideshowViewController.h; sourceTree = "<group>"; };
 		6959700E16DAE4FC0021868B /* SlideshowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideshowViewController.m; sourceTree = "<group>"; };
 		6959700F16DAE4FC0021868B /* SlideshowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideshowViewController.xib; sourceTree = "<group>"; };
+		69E41EC416DBAC1B00C27C9D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		69E41EC516DBAC1B00C27C9D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		69E41EC616DBAC1B00C27C9D /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,14 +127,17 @@
 				69596FD716DADE890021868B /* AppDelegate.h */,
 				69596FD816DADE890021868B /* AppDelegate.m */,
 				6959700516DAE3780021868B /* Resources */,
+				69E41EC416DBAC1B00C27C9D /* SettingsViewController.h */,
+				69E41EC516DBAC1B00C27C9D /* SettingsViewController.m */,
+				69E41EC616DBAC1B00C27C9D /* SettingsViewController.xib */,
+				6959700D16DAE4FC0021868B /* SlideshowViewController.h */,
+				6959700E16DAE4FC0021868B /* SlideshowViewController.m */,
+				6959700F16DAE4FC0021868B /* SlideshowViewController.xib */,
 				69596FCF16DADE890021868B /* Supporting Files */,
 				69596FEB16DAE17A0021868B /* ThirdParty */,
 				69596FE016DADE890021868B /* ViewController.h */,
 				69596FE116DADE890021868B /* ViewController.m */,
 				69596FE316DADE890021868B /* ViewController.xib */,
-				6959700D16DAE4FC0021868B /* SlideshowViewController.h */,
-				6959700E16DAE4FC0021868B /* SlideshowViewController.m */,
-				6959700F16DAE4FC0021868B /* SlideshowViewController.xib */,
 			);
 			path = BabyMeSlideshow;
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 				6959700916DAE3780021868B /* WSAssetViewSelectionIndicator.png in Resources */,
 				6959700A16DAE3780021868B /* WSAssetViewSelectionIndicator@2x.png in Resources */,
 				6959701116DAE4FC0021868B /* SlideshowViewController.xib in Resources */,
+				69E41EC816DBAC1B00C27C9D /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +277,7 @@
 				6959700116DAE17A0021868B /* WSAssetViewColumn.m in Sources */,
 				6959700216DAE17A0021868B /* WSAssetWrapper.m in Sources */,
 				6959701016DAE4FC0021868B /* SlideshowViewController.m in Sources */,
+				69E41EC716DBAC1B00C27C9D /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +402,7 @@
 				69596FEA16DADE890021868B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
