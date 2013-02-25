@@ -45,6 +45,33 @@
 	return _selectedPhotos != nil && [_selectedPhotos count] > 0;
 }
 
+- (void)setPhotos:(NSArray *)assets {
+	NSMutableArray *tmpPhotos = [[NSMutableArray alloc] init];
+	
+	for (ALAsset *asset in assets) {
+		
+		ALAssetRepresentation* representation = [asset defaultRepresentation];
+		
+		// Retrieve the image orientation from the ALAsset
+		UIImageOrientation orientation = UIImageOrientationUp;
+		NSNumber* orientationValue = [asset valueForProperty:@"ALAssetPropertyOrientation"];
+		if (orientationValue != nil) {
+			orientation = [orientationValue intValue];
+		}
+		
+		CGFloat scale  = 1;
+		UIImage* image = [UIImage imageWithCGImage:[representation fullResolutionImage]
+											 scale:scale orientation:orientation];
+		[tmpPhotos addObject:image];
+	}
+	_selectedPhotos = tmpPhotos;
+}
+
+- (void)showSlideshow {	
+	SlideshowViewController *slideshow = [[SlideshowViewController alloc] initWithPhotos:[_selectedPhotos mutableCopy]];
+	[self presentModalViewController:slideshow animated:YES];
+}
+
 #pragma mark - IBActions
 
 - (IBAction)selectPhotosForSlideshow:(id)sender {
@@ -72,30 +99,10 @@
     __block id weakSelf = self;
     [self dismissViewControllerAnimated:YES completion:^{
 		
-        // Do something with the assets here.
-		NSMutableArray *tmpPhotos = [[NSMutableArray alloc] init];
+		[self setPhotos:assets];
 		
-		for (ALAsset *asset in assets) {
-			
-			ALAssetRepresentation* representation = [asset defaultRepresentation];
-			
-			// Retrieve the image orientation from the ALAsset
-			UIImageOrientation orientation = UIImageOrientationUp;
-			NSNumber* orientationValue = [asset valueForProperty:@"ALAssetPropertyOrientation"];
-			if (orientationValue != nil) {
-				orientation = [orientationValue intValue];
-			}
-			
-			CGFloat scale  = 1;
-			UIImage* image = [UIImage imageWithCGImage:[representation fullResolutionImage]
-												 scale:scale orientation:orientation];
-			[tmpPhotos addObject:image];
-		}
-		_selectedPhotos = tmpPhotos;
-		
-		if ([self hasPhotos]) {		
-			SlideshowViewController *slideshow = [[SlideshowViewController alloc] initWithPhotos:[_selectedPhotos mutableCopy]];
-			[self presentModalViewController:slideshow animated:YES];
+		if ([self hasPhotos]) {
+			[self showSlideshow];
 		}
 		
         // Release the picker.
