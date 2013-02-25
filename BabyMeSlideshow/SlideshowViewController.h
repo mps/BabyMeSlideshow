@@ -12,6 +12,6 @@
 
 - (IBAction)exitSlideshow:(id)sender;
 
-- (id)initWithPhotos:(NSArray *)photos;
+- (id)initWithPhotos:(NSMutableArray *)photos;
 
 @end

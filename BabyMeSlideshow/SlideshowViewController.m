@@ -9,7 +9,9 @@
 #import "SlideshowViewController.h"
 
 @interface SlideshowViewController () <UIAlertViewDelegate> {
-	NSArray *_photos;
+	NSMutableArray *_photos;
+    NSTimer *timer;
+    int currentImage;
 }
 
 @property (nonatomic) IBOutlet UIImageView *photoView;
@@ -19,12 +21,14 @@
 
 @implementation SlideshowViewController
 
-- (id)initWithPhotos:(NSArray *)photos {
+- (id)initWithPhotos:(NSMutableArray *)photos {
 	if (self = [super init]) {
 		_photos = photos;
 	}
 	return self;
 }
+
+#pragma mark - UIView Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,13 +38,46 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-	self.photoView.image = [_photos objectAtIndex:0];
+	[self setImage:[_photos objectAtIndex:currentImage]];
+	[self startTimer];
 }
+
+#pragma mark - Methods
+
+- (void)setImage:(UIImage *)image {
+	self.photoView.image = image;
+}
+
+- (void)startTimer {
+    timer = [NSTimer scheduledTimerWithTimeInterval:3.5 // TODO: allow user to set this timer
+                                             target:self
+                                           selector:@selector(handleTimer:)
+                                           userInfo:nil
+                                            repeats:YES];
+}
+
+- (void)handleTimer:(NSTimer *)timer {
+    currentImage++;
+    if ( currentImage >= _photos.count )
+        currentImage = 0;
+	
+	UIImage * toImage = [_photos objectAtIndex:currentImage];
+	[UIView transitionWithView:self.view
+					  duration:1.0f
+					   options:UIViewAnimationOptionTransitionCrossDissolve
+					animations:^{
+						[self setImage:toImage];
+					} completion:NULL];
+}
+
+#pragma mark - IBActions
 
 - (IBAction)exitSlideshow:(id)sender {
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Exit" message:@"Are you sure you want to exit this slideshow?" delegate:self cancelButtonTitle:@"Not Now" otherButtonTitles:@"Exit", nil];
 	[alert show];
 }
+
+#pragma mark - UIAlertViewDelegate
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 	if (buttonIndex == 1) {

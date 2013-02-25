@@ -16,12 +16,13 @@
 }
 
 @property (nonatomic) IBOutlet UIButton *selectPhotosButton;
-
 @property (nonatomic) WSAssetPickerController *picker;
 
 @end
 
 @implementation ViewController
+
+#pragma mark - UIView Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,10 +37,20 @@
 	}
 }
 
+#pragma mark - Methods
+
+- (BOOL)hasPhotos {
+	return _selectedPhotos != nil && [_selectedPhotos count] > 0;
+}
+
+#pragma mark - IBActions
+
 - (IBAction)selectPhotosForSlideshow:(id)sender {
 	self.picker = [[WSAssetPickerController alloc] initWithDelegate:self];
 	[self presentModalViewController:self.picker animated:YES];
 }
+
+#pragma mark - WSAssetPickerControllerDelegate
 
 - (void)assetPickerControllerDidCancel:(WSAssetPickerController *)sender {
     [self dismissViewControllerAnimated:YES completion:NULL];
@@ -75,17 +86,13 @@
 		_selectedPhotos = tmpPhotos;
 		
 		if ([self hasPhotos]) {		
-			SlideshowViewController *slideshow = [[SlideshowViewController alloc] initWithPhotos:_selectedPhotos];
+			SlideshowViewController *slideshow = [[SlideshowViewController alloc] initWithPhotos:[_selectedPhotos mutableCopy]];
 			[self presentModalViewController:slideshow animated:YES];
 		}
 		
         // Release the picker.
         [weakSelf setPicker:nil];
     }];
-}
-
-- (BOOL)hasPhotos {
-	return _selectedPhotos != nil && [_selectedPhotos count] > 0;
 }
 
 
