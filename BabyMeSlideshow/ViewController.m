@@ -47,8 +47,7 @@
 - (void)setPhotos:(NSArray *)assets {
 	NSMutableArray *tmpPhotos = [[NSMutableArray alloc] init];
 	
-	for (ALAsset *asset in assets) {
-		
+	for (ALAsset *asset in assets) {		
 		ALAssetRepresentation* representation = [asset defaultRepresentation];
 		
 		// Retrieve the image orientation from the ALAsset
@@ -60,7 +59,8 @@
 		
 		CGFloat scale  = 1;
 		UIImage* image = [UIImage imageWithCGImage:[representation fullResolutionImage]
-											 scale:scale orientation:orientation];
+											 scale:scale
+									   orientation:orientation];
 		[tmpPhotos addObject:image];
 	}
 	_selectedPhotos = tmpPhotos;
