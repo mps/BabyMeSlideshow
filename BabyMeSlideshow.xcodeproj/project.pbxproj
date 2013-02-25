@@ -76,6 +76,7 @@
 		69E41EC416DBAC1B00C27C9D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		69E41EC516DBAC1B00C27C9D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		69E41EC616DBAC1B00C27C9D /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		69E41EC916DBB09800C27C9D /* AppDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefaults.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +125,7 @@
 		69596FCE16DADE890021868B /* BabyMeSlideshow */ = {
 			isa = PBXGroup;
 			children = (
+				69E41EC916DBB09800C27C9D /* AppDefaults.h */,
 				69596FD716DADE890021868B /* AppDelegate.h */,
 				69596FD816DADE890021868B /* AppDelegate.m */,
 				6959700516DAE3780021868B /* Resources */,

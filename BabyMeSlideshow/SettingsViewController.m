@@ -14,12 +14,53 @@
 
 @property (nonatomic) IBOutlet UIButton *exitButton;
 
+@property (nonatomic) IBOutlet UILabel *photoDurationLabel;
+@property (nonatomic) IBOutlet UILabel *fadeDurationLabel;
+
+@property (nonatomic) IBOutlet UISlider *photoDurationSlider;
+@property (nonatomic) IBOutlet UISlider *fadeDurationSlider;
+
 @end
 
 @implementation SettingsViewController
 
+#pragma mark - UIView Lifecycle
+
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	
+	[self setupSliders];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	[self initializeSettings];
+}
+
+#pragma mark - Methods
+
+- (void)setupSliders {
+	[self.photoDurationSlider addTarget:self action:@selector(photoDurationSliderChanged:) forControlEvents:UIControlEventValueChanged];
+	[self.fadeDurationSlider addTarget:self action:@selector(fadeDurationSliderChanged:) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)initializeSettings {
+	
+}
+
+#pragma mark - IBActions
+
 - (IBAction)exitSettings:(id)sender {
 	[self dismissViewControllerAnimated:YES completion:NULL];	
+}
+
+#pragma mark - UISlider
+
+- (void)photoDurationSliderChanged:(UISlider *)slider {
+    self.photoDurationLabel.text = [NSString stringWithFormat:@"%.1lf seconds", slider.value];
+}
+
+- (void)fadeDurationSliderChanged:(UISlider *)slider {
+    self.fadeDurationLabel.text = [NSString stringWithFormat:@"%.1lf Seconds", slider.value];
 }
 
 @end

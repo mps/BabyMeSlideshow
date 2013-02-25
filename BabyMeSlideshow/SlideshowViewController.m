@@ -49,7 +49,7 @@
 }
 
 - (void)startTimer {
-    timer = [NSTimer scheduledTimerWithTimeInterval:3.5 // TODO: allow user to set this timer
+    timer = [NSTimer scheduledTimerWithTimeInterval:DEFAULT_PHOTO_DURATION // TODO: allow user to set this timer
                                              target:self
                                            selector:@selector(handleTimer:)
                                            userInfo:nil
@@ -63,7 +63,7 @@
 	
 	UIImage * toImage = [_photos objectAtIndex:currentImage];
 	[UIView transitionWithView:self.view
-					  duration:1.0f
+					  duration:DEFAULT_FADE_DURATION
 					   options:UIViewAnimationOptionTransitionCrossDissolve
 					animations:^{
 						[self setImage:toImage];
