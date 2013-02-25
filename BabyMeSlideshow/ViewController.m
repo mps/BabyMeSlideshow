@@ -69,7 +69,6 @@
 
 - (void)showSlideshow {	
 	SlideshowViewController *slideshow = [[SlideshowViewController alloc] initWithPhotos:[_selectedPhotos mutableCopy]];
-	[self hideProgress];
 	[self presentModalViewController:slideshow animated:YES];
 }
 
@@ -99,7 +98,9 @@
 }
 
 - (void)assetPickerController:(WSAssetPickerController *)sender didFinishPickingMediaWithAssets:(NSArray *)assets {
-	[self showProgress];
+	if ([assets count] > 0) {
+		[self showProgress];
+	}
 	
     // Hang on to the picker to avoid ALAssetsLibrary from being released (see note below).
     self.picker = sender;
@@ -113,6 +114,8 @@
 		if ([self hasPhotos]) {
 			[self showSlideshow];
 		}
+		
+		[self hideProgress];
 		
         // Release the picker.
         [weakSelf setPicker:nil];
