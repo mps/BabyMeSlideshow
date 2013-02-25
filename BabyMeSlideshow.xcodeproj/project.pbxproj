@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69596FC916DADE890021868B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69596FC816DADE890021868B /* UIKit.framework */; };
+		69596FCB16DADE890021868B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69596FCA16DADE890021868B /* Foundation.framework */; };
+		69596FCD16DADE890021868B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69596FCC16DADE890021868B /* CoreGraphics.framework */; };
+		69596FD316DADE890021868B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69596FD116DADE890021868B /* InfoPlist.strings */; };
+		69596FD516DADE890021868B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69596FD416DADE890021868B /* main.m */; };
+		69596FD916DADE890021868B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69596FD816DADE890021868B /* AppDelegate.m */; };
+		69596FDB16DADE890021868B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 69596FDA16DADE890021868B /* Default.png */; };
+		69596FDD16DADE890021868B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69596FDC16DADE890021868B /* Default@2x.png */; };
+		69596FDF16DADE890021868B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69596FDE16DADE890021868B /* Default-568h@2x.png */; };
+		69596FE216DADE890021868B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69596FE116DADE890021868B /* ViewController.m */; };
+		69596FE516DADE890021868B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69596FE316DADE890021868B /* ViewController.xib */; };
+		69596FFC16DAE17A0021868B /* WSAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69596FED16DAE17A0021868B /* WSAlbumTableViewController.m */; };
+		69596FFD16DAE17A0021868B /* WSAssetPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69596FF116DAE17A0021868B /* WSAssetPickerController.m */; };
+		69596FFE16DAE17A0021868B /* WSAssetPickerState.m in Sources */ = {isa = PBXBuildFile; fileRef = 69596FF316DAE17A0021868B /* WSAssetPickerState.m */; };
+		69596FFF16DAE17A0021868B /* WSAssetsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69596FF516DAE17A0021868B /* WSAssetsTableViewCell.m */; };
+		6959700016DAE17A0021868B /* WSAssetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69596FF716DAE17A0021868B /* WSAssetTableViewController.m */; };
+		6959700116DAE17A0021868B /* WSAssetViewColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 69596FF916DAE17A0021868B /* WSAssetViewColumn.m */; };
+		6959700216DAE17A0021868B /* WSAssetWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 69596FFB16DAE17A0021868B /* WSAssetWrapper.m */; };
+		6959700416DAE1950021868B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6959700316DAE1950021868B /* AssetsLibrary.framework */; };
+		6959700916DAE3780021868B /* WSAssetViewSelectionIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 6959700716DAE3780021868B /* WSAssetViewSelectionIndicator.png */; };
+		6959700A16DAE3780021868B /* WSAssetViewSelectionIndicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6959700816DAE3780021868B /* WSAssetViewSelectionIndicator@2x.png */; };
+		6959701016DAE4FC0021868B /* SlideshowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6959700E16DAE4FC0021868B /* SlideshowViewController.m */; };
+		6959701116DAE4FC0021868B /* SlideshowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6959700F16DAE4FC0021868B /* SlideshowViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		69596FC516DADE890021868B /* BabyMeSlideshow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyMeSlideshow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69596FC816DADE890021868B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		69596FCA16DADE890021868B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		69596FCC16DADE890021868B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		69596FD016DADE890021868B /* BabyMeSlideshow-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BabyMeSlideshow-Info.plist"; sourceTree = "<group>"; };
+		69596FD216DADE890021868B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		69596FD416DADE890021868B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		69596FD616DADE890021868B /* BabyMeSlideshow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BabyMeSlideshow-Prefix.pch"; sourceTree = "<group>"; };
+		69596FD716DADE890021868B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		69596FD816DADE890021868B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		69596FDA16DADE890021868B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		69596FDC16DADE890021868B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		69596FDE16DADE890021868B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		69596FE016DADE890021868B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		69596FE116DADE890021868B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		69596FE416DADE890021868B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		69596FEC16DAE17A0021868B /* WSAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAlbumTableViewController.h; sourceTree = "<group>"; };
+		69596FED16DAE17A0021868B /* WSAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAlbumTableViewController.m; sourceTree = "<group>"; };
+		69596FEE16DAE17A0021868B /* WSAssetPicker-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WSAssetPicker-Prefix.pch"; sourceTree = "<group>"; };
+		69596FEF16DAE17A0021868B /* WSAssetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAssetPicker.h; sourceTree = "<group>"; };
+		69596FF016DAE17A0021868B /* WSAssetPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAssetPickerController.h; sourceTree = "<group>"; };
+		69596FF116DAE17A0021868B /* WSAssetPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAssetPickerController.m; sourceTree = "<group>"; };
+		69596FF216DAE17A0021868B /* WSAssetPickerState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAssetPickerState.h; sourceTree = "<group>"; };
+		69596FF316DAE17A0021868B /* WSAssetPickerState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAssetPickerState.m; sourceTree = "<group>"; };
+		69596FF416DAE17A0021868B /* WSAssetsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAssetsTableViewCell.h; sourceTree = "<group>"; };
+		69596FF516DAE17A0021868B /* WSAssetsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAssetsTableViewCell.m; sourceTree = "<group>"; };
+		69596FF616DAE17A0021868B /* WSAssetTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAssetTableViewController.h; sourceTree = "<group>"; };
+		69596FF716DAE17A0021868B /* WSAssetTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAssetTableViewController.m; sourceTree = "<group>"; };
+		69596FF816DAE17A0021868B /* WSAssetViewColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAssetViewColumn.h; sourceTree = "<group>"; };
+		69596FF916DAE17A0021868B /* WSAssetViewColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAssetViewColumn.m; sourceTree = "<group>"; };
+		69596FFA16DAE17A0021868B /* WSAssetWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAssetWrapper.h; sourceTree = "<group>"; };
+		69596FFB16DAE17A0021868B /* WSAssetWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAssetWrapper.m; sourceTree = "<group>"; };
+		6959700316DAE1950021868B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		6959700716DAE3780021868B /* WSAssetViewSelectionIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WSAssetViewSelectionIndicator.png; sourceTree = "<group>"; };
+		6959700816DAE3780021868B /* WSAssetViewSelectionIndicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WSAssetViewSelectionIndicator@2x.png"; sourceTree = "<group>"; };
+		6959700D16DAE4FC0021868B /* SlideshowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideshowViewController.h; sourceTree = "<group>"; };
+		6959700E16DAE4FC0021868B /* SlideshowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideshowViewController.m; sourceTree = "<group>"; };
+		6959700F16DAE4FC0021868B /* SlideshowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideshowViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69596FC216DADE890021868B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6959700416DAE1950021868B /* AssetsLibrary.framework in Frameworks */,
+				69596FC916DADE890021868B /* UIKit.framework in Frameworks */,
+				69596FCB16DADE890021868B /* Foundation.framework in Frameworks */,
+				69596FCD16DADE890021868B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69596FBC16DADE890021868B = {
+			isa = PBXGroup;
+			children = (
+				69596FCE16DADE890021868B /* BabyMeSlideshow */,
+				69596FC716DADE890021868B /* Frameworks */,
+				69596FC616DADE890021868B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69596FC616DADE890021868B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69596FC516DADE890021868B /* BabyMeSlideshow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69596FC716DADE890021868B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6959700316DAE1950021868B /* AssetsLibrary.framework */,
+				69596FC816DADE890021868B /* UIKit.framework */,
+				69596FCA16DADE890021868B /* Foundation.framework */,
+				69596FCC16DADE890021868B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69596FCE16DADE890021868B /* BabyMeSlideshow */ = {
+			isa = PBXGroup;
+			children = (
+				69596FD716DADE890021868B /* AppDelegate.h */,
+				69596FD816DADE890021868B /* AppDelegate.m */,
+				6959700516DAE3780021868B /* Resources */,
+				69596FCF16DADE890021868B /* Supporting Files */,
+				69596FEB16DAE17A0021868B /* ThirdParty */,
+				69596FE016DADE890021868B /* ViewController.h */,
+				69596FE116DADE890021868B /* ViewController.m */,
+				69596FE316DADE890021868B /* ViewController.xib */,
+				6959700D16DAE4FC0021868B /* SlideshowViewController.h */,
+				6959700E16DAE4FC0021868B /* SlideshowViewController.m */,
+				6959700F16DAE4FC0021868B /* SlideshowViewController.xib */,
+			);
+			path = BabyMeSlideshow;
+			sourceTree = "<group>";
+		};
+		69596FCF16DADE890021868B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				69596FD016DADE890021868B /* BabyMeSlideshow-Info.plist */,
+				69596FD116DADE890021868B /* InfoPlist.strings */,
+				69596FD416DADE890021868B /* main.m */,
+				69596FD616DADE890021868B /* BabyMeSlideshow-Prefix.pch */,
+				69596FDA16DADE890021868B /* Default.png */,
+				69596FDC16DADE890021868B /* Default@2x.png */,
+				69596FDE16DADE890021868B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		69596FEB16DAE17A0021868B /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				69596FEC16DAE17A0021868B /* WSAlbumTableViewController.h */,
+				69596FED16DAE17A0021868B /* WSAlbumTableViewController.m */,
+				69596FEE16DAE17A0021868B /* WSAssetPicker-Prefix.pch */,
+				69596FEF16DAE17A0021868B /* WSAssetPicker.h */,
+				69596FF016DAE17A0021868B /* WSAssetPickerController.h */,
+				69596FF116DAE17A0021868B /* WSAssetPickerController.m */,
+				69596FF216DAE17A0021868B /* WSAssetPickerState.h */,
+				69596FF316DAE17A0021868B /* WSAssetPickerState.m */,
+				69596FF416DAE17A0021868B /* WSAssetsTableViewCell.h */,
+				69596FF516DAE17A0021868B /* WSAssetsTableViewCell.m */,
+				69596FF616DAE17A0021868B /* WSAssetTableViewController.h */,
+				69596FF716DAE17A0021868B /* WSAssetTableViewController.m */,
+				69596FF816DAE17A0021868B /* WSAssetViewColumn.h */,
+				69596FF916DAE17A0021868B /* WSAssetViewColumn.m */,
+				69596FFA16DAE17A0021868B /* WSAssetWrapper.h */,
+				69596FFB16DAE17A0021868B /* WSAssetWrapper.m */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		6959700516DAE3780021868B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6959700616DAE3780021868B /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6959700616DAE3780021868B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6959700716DAE3780021868B /* WSAssetViewSelectionIndicator.png */,
+				6959700816DAE3780021868B /* WSAssetViewSelectionIndicator@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69596FC416DADE890021868B /* BabyMeSlideshow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69596FE816DADE890021868B /* Build configuration list for PBXNativeTarget "BabyMeSlideshow" */;
+			buildPhases = (
+				69596FC116DADE890021868B /* Sources */,
+				69596FC216DADE890021868B /* Frameworks */,
+				69596FC316DADE890021868B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BabyMeSlideshow;
+			productName = BabyMeSlideshow;
+			productReference = 69596FC516DADE890021868B /* BabyMeSlideshow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69596FBD16DADE890021868B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Idle Fusion";
+			};
+			buildConfigurationList = 69596FC016DADE890021868B /* Build configuration list for PBXProject "BabyMeSlideshow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 69596FBC16DADE890021868B;
+			productRefGroup = 69596FC616DADE890021868B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69596FC416DADE890021868B /* BabyMeSlideshow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69596FC316DADE890021868B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69596FD316DADE890021868B /* InfoPlist.strings in Resources */,
+				69596FDB16DADE890021868B /* Default.png in Resources */,
+				69596FDD16DADE890021868B /* Default@2x.png in Resources */,
+				69596FDF16DADE890021868B /* Default-568h@2x.png in Resources */,
+				69596FE516DADE890021868B /* ViewController.xib in Resources */,
+				6959700916DAE3780021868B /* WSAssetViewSelectionIndicator.png in Resources */,
+				6959700A16DAE3780021868B /* WSAssetViewSelectionIndicator@2x.png in Resources */,
+				6959701116DAE4FC0021868B /* SlideshowViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69596FC116DADE890021868B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69596FD516DADE890021868B /* main.m in Sources */,
+				69596FD916DADE890021868B /* AppDelegate.m in Sources */,
+				69596FE216DADE890021868B /* ViewController.m in Sources */,
+				69596FFC16DAE17A0021868B /* WSAlbumTableViewController.m in Sources */,
+				69596FFD16DAE17A0021868B /* WSAssetPickerController.m in Sources */,
+				69596FFE16DAE17A0021868B /* WSAssetPickerState.m in Sources */,
+				69596FFF16DAE17A0021868B /* WSAssetsTableViewCell.m in Sources */,
+				6959700016DAE17A0021868B /* WSAssetTableViewController.m in Sources */,
+				6959700116DAE17A0021868B /* WSAssetViewColumn.m in Sources */,
+				6959700216DAE17A0021868B /* WSAssetWrapper.m in Sources */,
+				6959701016DAE4FC0021868B /* SlideshowViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		69596FD116DADE890021868B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69596FD216DADE890021868B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		69596FE316DADE890021868B /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69596FE416DADE890021868B /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		69596FE616DADE890021868B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		69596FE716DADE890021868B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69596FE916DADE890021868B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BabyMeSlideshow/BabyMeSlideshow-Prefix.pch";
+				INFOPLIST_FILE = "BabyMeSlideshow/BabyMeSlideshow-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		69596FEA16DADE890021868B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BabyMeSlideshow/BabyMeSlideshow-Prefix.pch";
+				INFOPLIST_FILE = "BabyMeSlideshow/BabyMeSlideshow-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69596FC016DADE890021868B /* Build configuration list for PBXProject "BabyMeSlideshow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69596FE616DADE890021868B /* Debug */,
+				69596FE716DADE890021868B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69596FE816DADE890021868B /* Build configuration list for PBXNativeTarget "BabyMeSlideshow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69596FE916DADE890021868B /* Debug */,
+				69596FEA16DADE890021868B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69596FBD16DADE890021868B /* Project object */;
+}
