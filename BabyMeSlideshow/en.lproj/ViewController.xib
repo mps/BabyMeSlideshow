@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1552</int>
-		<string key="IBDocument.SystemVersion">12C60</string>
+		<string key="IBDocument.SystemVersion">12C3012</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
 		<string key="IBDocument.AppKitVersion">1187.34</string>
 		<string key="IBDocument.HIToolboxVersion">625.00</string>
@@ -56,10 +56,6 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MCAwLjE4MDM5MjE1NjkgMC4zMzcyNTQ5MDIgMC42NwA</bytes>
 						</object>
-						<object class="NSCustomResource" key="IBUIHighlightedImage" id="366123995">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">ipad-button-blue-pressed.png</string>
-						</object>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="158247366">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">ipad-button-blue.png</string>
@@ -93,7 +89,6 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MCAwLjE4MDM5MjE1NjkgMC4zMzcyNTQ5MDIgMC42NwA</bytes>
 						</object>
-						<reference key="IBUIHighlightedImage" ref="366123995"/>
 						<reference key="IBUINormalBackgroundImage" ref="158247366"/>
 						<reference key="IBUIFontDescription" ref="507850084"/>
 						<reference key="IBUIFont" ref="564198494"/>
@@ -116,10 +111,6 @@
 						<object class="NSColor" key="IBUINormalTitleShadowColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MCAwLjE4MDM5MjE1NjkgMC4zMzcyNTQ5MDIgMC42NwA</bytes>
-						</object>
-						<object class="NSCustomResource" key="IBUIHighlightedImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">ipad-button-green-pressed.png</string>
 						</object>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
@@ -305,9 +296,7 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="ipad-button-blue-pressed.png">{156, 49}</string>
 			<string key="ipad-button-blue.png">{157, 49}</string>
-			<string key="ipad-button-green-pressed.png">{156, 49}</string>
 			<string key="ipad-button-green.png">{159, 51}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
