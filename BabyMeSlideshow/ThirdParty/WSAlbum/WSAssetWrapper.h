@@ -18,6 +18,7 @@
 //  limitations under the License.
 
 #import <Foundation/Foundation.h>
+#import <AssetsLibrary/ALAsset.h>
 
 @interface WSAssetWrapper : NSObject
 
