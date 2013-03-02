@@ -37,6 +37,26 @@
 	[self initializeSettings];
 }
 
+//- (BOOL)shouldAutorotate {
+//    if (([[UIDevice currentDevice] orientation] == UIInterfaceOrientationLandscapeLeft) ||
+//        ([[UIDevice currentDevice] orientation] == UIInterfaceOrientationLandscapeRight))
+//        return YES;
+//    
+//    return NO;
+//}
+//
+//- (NSUInteger)supportedInterfaceOrientations {
+//    return UIInterfaceOrientationLandscapeLeft | UIInterfaceOrientationLandscapeRight;
+//}
+//
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orientation {
+//    if ((orientation == UIInterfaceOrientationLandscapeLeft) ||
+//        (orientation == UIInterfaceOrientationLandscapeRight))
+//        return YES;
+//    
+//    return NO;
+//}
+
 #pragma mark - Methods
 
 - (void)setupSliders {

@@ -34,6 +34,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
+    [longPress setMinimumPressDuration:3];
+    [self.exitButton addGestureRecognizer:longPress];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -42,6 +46,26 @@
 	[self setImage:[_photos objectAtIndex:currentImage]];
 	[self startTimer];
 }
+
+//- (BOOL)shouldAutorotate {
+//    if (([[UIDevice currentDevice] orientation] == UIInterfaceOrientationLandscapeLeft) ||
+//        ([[UIDevice currentDevice] orientation] == UIInterfaceOrientationLandscapeRight))
+//        return YES;
+//    
+//    return NO;
+//}
+//
+//- (NSUInteger)supportedInterfaceOrientations {
+//    return UIInterfaceOrientationLandscapeLeft | UIInterfaceOrientationLandscapeRight;
+//}
+//
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orientation {
+//    if ((orientation == UIInterfaceOrientationLandscapeLeft) ||
+//        (orientation == UIInterfaceOrientationLandscapeRight))
+//        return YES;
+//    
+//    return NO;
+//}
 
 #pragma mark - Methods
 
@@ -71,11 +95,11 @@
 					} completion:NULL];
 }
 
-#pragma mark - IBActions
-
-- (IBAction)exitSlideshow:(id)sender {
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Exit" message:@"Are you sure you want to exit this slideshow?" delegate:self cancelButtonTitle:@"Not Now" otherButtonTitles:@"Exit", nil];
-	[alert show];
+- (void)longPress:(UILongPressGestureRecognizer*)gesture {
+    if ( gesture.state == UIGestureRecognizerStateEnded ) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Exit" message:@"Are you sure you want to exit this slideshow?" delegate:self cancelButtonTitle:@"Not Now" otherButtonTitles:@"Exit", nil];
+        [alert show];
+    }
 }
 
 #pragma mark - UIAlertViewDelegate

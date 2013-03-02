@@ -10,8 +10,6 @@
 
 @interface SlideshowViewController : UIViewController
 
-- (IBAction)exitSlideshow:(id)sender;
-
 - (id)initWithPhotos:(NSMutableArray *)photos;
 
 @end

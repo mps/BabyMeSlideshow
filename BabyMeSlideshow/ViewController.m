@@ -15,9 +15,10 @@
 #import "SVProgressHUD.h"
 #import "WSAssetWrapper.h"
 
-#define NEWSLIDESHOW_PRIMARY_POSITION			IS_IPHONE_5_SCREEN ? CGRectMake(360, 164, 157, 49) : CGRectMake(312, 164, 157, 49);
-#define SETTINGS_PRIMARY_POSITION				IS_IPHONE_5_SCREEN ? CGRectMake(360, 220, 157, 30) : CGRectMake(312, 220, 157, 30);
-#define SETTINGS_SECONDARY_POSITION				IS_IPHONE_5_SCREEN ? CGRectMake(360, 260, 157, 30) : CGRectMake(312, 260, 157, 30);
+#define NEWSLIDESHOW_PRIMARY_POSITION			IS_IPHONE_5_SCREEN ? CGRectMake(107, 210, 157, 49) : CGRectMake(70, 210, 157, 49);
+#define USEPREVIOUS_PRIMARY_POSITION			IS_IPHONE_5_SCREEN ? CGRectMake(320, 200, 157, 30) : CGRectMake(275, 200, 157, 30);
+#define SETTINGS_PRIMARY_POSITION				IS_IPHONE_5_SCREEN ? CGRectMake(320, 220, 157, 30) : CGRectMake(275, 220, 157, 30);
+#define SETTINGS_SECONDARY_POSITION				IS_IPHONE_5_SCREEN ? CGRectMake(320, 240, 157, 30) : CGRectMake(275, 240, 157, 30);
 
 @interface ViewController ()<WSAssetPickerControllerDelegate> {
 	NSArray *_selectedPhotos;
@@ -26,6 +27,7 @@
 @property (nonatomic) IBOutlet UIButton *selectPhotosButton;
 @property (nonatomic) IBOutlet UIButton *usePreviousPhotosButton;
 @property (nonatomic) IBOutlet UIButton *showSettingsButton;
+@property (nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (nonatomic) WSAssetPickerController *picker;
 
 @end
@@ -36,7 +38,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    if (IS_IPHONE_5_SCREEN) {
+        self.backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"home"]];
+//        [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"home"]]];
+        
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -46,7 +53,7 @@
 	
 	if ([self hasPhotos]) {
 		self.usePreviousPhotosButton.hidden = NO;
-		self.usePreviousPhotosButton.frame = SETTINGS_PRIMARY_POSITION;
+		self.usePreviousPhotosButton.frame = USEPREVIOUS_PRIMARY_POSITION;
 		self.showSettingsButton.frame = SETTINGS_SECONDARY_POSITION;
 	} else {
 		self.usePreviousPhotosButton.hidden = YES;
@@ -55,6 +62,26 @@
 	
 	self.usePreviousPhotosButton.hidden = ![self hasPhotos];
 }
+
+//- (BOOL)shouldAutorotate {
+//    if (([[UIDevice currentDevice] orientation] == UIInterfaceOrientationLandscapeLeft) ||
+//        ([[UIDevice currentDevice] orientation] == UIInterfaceOrientationLandscapeRight))
+//        return YES;
+//    
+//    return NO;
+//}
+//
+//- (NSUInteger)supportedInterfaceOrientations {
+//    return UIInterfaceOrientationLandscapeLeft | UIInterfaceOrientationLandscapeRight;
+//}
+//
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orientation {
+//    if ((orientation == UIInterfaceOrientationLandscapeLeft) ||
+//        (orientation == UIInterfaceOrientationLandscapeRight))
+//        return YES;
+//    
+//    return NO;
+//}
 
 #pragma mark - Methods
 
@@ -86,14 +113,14 @@
 
 - (void)showSlideshow {	
 	SlideshowViewController *slideshow = [[SlideshowViewController alloc] initWithPhotos:[_selectedPhotos mutableCopy]];
-	[self presentModalViewController:slideshow animated:YES];
+	[self presentViewController:slideshow animated:YES completion:nil];
 }
 
 #pragma mark - IBActions
 
 - (IBAction)selectPhotosForSlideshow:(id)sender {
 	self.picker = [[WSPickerWithToolbar alloc] initWithDelegate:self];
-	[self presentModalViewController:self.picker animated:YES];
+	[self presentViewController:self.picker animated:YES completion:nil];
 }
 
 - (IBAction)usePreviousPhotosForSlideshow:(id)sender {
@@ -104,7 +131,7 @@
 
 - (IBAction)showSettings:(id)sender {
 	SettingsViewController *settings = [[SettingsViewController alloc] init];
-	[self presentModalViewController:settings animated:YES];
+	[self presentViewController:settings animated:YES completion:nil];
 	
 }
 
