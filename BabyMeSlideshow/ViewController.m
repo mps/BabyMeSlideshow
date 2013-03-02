@@ -8,10 +8,12 @@
 
 #import "ViewController.h"
 #import "WSAssetPicker.h"
+#import "WSPickerWithToolbar.h"
 #import "SettingsViewController.h"
 #import "SlideshowViewController.h"
 #import <AssetsLibrary/ALAsset.h>
 #import "SVProgressHUD.h"
+#import "WSAssetWrapper.h"
 
 #define NEWSLIDESHOW_PRIMARY_POSITION			IS_IPHONE_5_SCREEN ? CGRectMake(360, 164, 157, 49) : CGRectMake(312, 164, 157, 49);
 #define SETTINGS_PRIMARY_POSITION				IS_IPHONE_5_SCREEN ? CGRectMake(360, 220, 157, 30) : CGRectMake(312, 220, 157, 30);
@@ -63,7 +65,8 @@
 - (void)setPhotos:(NSArray *)assets {
 	NSMutableArray *tmpPhotos = [[NSMutableArray alloc] init];
 	
-	for (ALAsset *asset in assets) {		
+	for (WSAssetWrapper *wsasset in assets) {
+		ALAsset *asset = wsasset.asset;
 		ALAssetRepresentation* representation = [asset defaultRepresentation];
 		
 		// Retrieve the image orientation from the ALAsset
@@ -90,7 +93,7 @@
 #pragma mark - IBActions
 
 - (IBAction)selectPhotosForSlideshow:(id)sender {
-	self.picker = [[WSAssetPickerController alloc] initWithDelegate:self];
+	self.picker = [[WSPickerWithToolbar alloc] initWithDelegate:self];
 	[self presentModalViewController:self.picker animated:YES];
 }
 

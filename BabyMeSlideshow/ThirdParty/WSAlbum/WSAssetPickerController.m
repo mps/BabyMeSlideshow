@@ -90,12 +90,26 @@
     [_assetPickerState removeObserver:self forKeyPath:SELECTED_COUNT_KEY];
 }
 
+- (void)selectAll
+{
+    if (WSAssetPickerStatePickingAssets == self.assetPickerState.state) {
+        self.assetPickerState.state = WSAssetPickerStateSelectAll;
+    }
+}
+
+- (void)selectNone
+{
+    if (WSAssetPickerStateSelectAll == self.assetPickerState.state) {
+        self.assetPickerState.state = WSAssetPickerStateSelectNone;
+        self.assetPickerState.state = WSAssetPickerStatePickingAssets;
+    }
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {    
     if (![object isEqual:self.assetPickerState]) return;
     
     if ([STATE_KEY isEqualToString:keyPath]) {     
-        
         // Cast the delegate to the assetPickerDelegate.
         id <WSAssetPickerControllerDelegate> delegate = (id <WSAssetPickerControllerDelegate>)self.delegate;
         

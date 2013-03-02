@@ -51,6 +51,7 @@
 		69EAA90816E25B4300EA42C9 /* ipad-slider-handle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EAA90216E25B4300EA42C9 /* ipad-slider-handle@2x.png */; };
 		69EAA90916E25B4300EA42C9 /* ipad-slider-track.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EAA90316E25B4300EA42C9 /* ipad-slider-track.png */; };
 		69EAA90A16E25B4300EA42C9 /* ipad-slider-track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EAA90416E25B4300EA42C9 /* ipad-slider-track@2x.png */; };
+		69EAA90D16E25C8200EA42C9 /* WSPickerWithToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EAA90C16E25C8200EA42C9 /* WSPickerWithToolbar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +119,8 @@
 		69EAA90216E25B4300EA42C9 /* ipad-slider-handle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-slider-handle@2x.png"; sourceTree = "<group>"; };
 		69EAA90316E25B4300EA42C9 /* ipad-slider-track.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-slider-track.png"; sourceTree = "<group>"; };
 		69EAA90416E25B4300EA42C9 /* ipad-slider-track@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-slider-track@2x.png"; sourceTree = "<group>"; };
+		69EAA90B16E25C8200EA42C9 /* WSPickerWithToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPickerWithToolbar.h; sourceTree = "<group>"; };
+		69EAA90C16E25C8200EA42C9 /* WSPickerWithToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSPickerWithToolbar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +270,8 @@
 				69E41EDF16DBC0B200C27C9D /* WSAssetViewColumn.m */,
 				69E41EE016DBC0B200C27C9D /* WSAssetWrapper.h */,
 				69E41EE116DBC0B200C27C9D /* WSAssetWrapper.m */,
+				69EAA90B16E25C8200EA42C9 /* WSPickerWithToolbar.h */,
+				69EAA90C16E25C8200EA42C9 /* WSPickerWithToolbar.m */,
 			);
 			path = WSAlbum;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 				69E41EE916DBC0B200C27C9D /* WSAssetViewColumn.m in Sources */,
 				69E41EEA16DBC0B200C27C9D /* WSAssetWrapper.m in Sources */,
 				69EAA8FE16E25B0100EA42C9 /* UIImage+iPhone5.m in Sources */,
+				69EAA90D16E25C8200EA42C9 /* WSPickerWithToolbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

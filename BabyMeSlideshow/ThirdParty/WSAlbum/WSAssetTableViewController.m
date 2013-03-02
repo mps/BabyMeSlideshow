@@ -17,13 +17,13 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import <AssetsLibrary/ALAssetsGroup.h>
 #import "WSAssetTableViewController.h"
 #import "WSAssetPickerState.h"
 #import "WSAssetsTableViewCell.h"
 #import "WSAssetWrapper.h"
 
-#define ASSET_WIDTH_WITH_PADDING 79.0f
+#define ASSETS_PER_ROW_PORTRAIT 4
+#define ASSETS_PER_ROW_LANDSCAPE 6
 
 @interface WSAssetTableViewController () <WSAssetsTableViewCellDelegate>
 @property (nonatomic, strong) NSMutableArray *fetchedAssets;
@@ -58,6 +58,7 @@
     self.assetPickerState.state = WSAssetPickerStatePickingAssets;
 }
 
+#define STATE_KEY @"state"
 - (void)viewWillDisappear:(BOOL)animated
 {
     // Hide the toolbar in the event it's being displayed.
@@ -65,9 +66,11 @@
         [self.navigationController setToolbarHidden:YES animated:YES];
     }
     
+    // Stop observing state changes.
+    [self.assetPickerState removeObserver:self forKeyPath:STATE_KEY];
+    
     [super viewWillDisappear:animated];
 }
-
 
 - (void)viewDidLoad
 {
@@ -76,7 +79,8 @@
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone 
                                                                                            target:self 
                                                                                            action:@selector(doneButtonAction:)];
-    
+    // Start observing state changes.
+    [self.assetPickerState addObserver:self forKeyPath:STATE_KEY options:NSKeyValueObservingOptionNew context:NULL];
     
     // TableView configuration.
     self.tableView.contentInset = TABLEVIEW_INSETS;
@@ -101,7 +105,13 @@
 
 - (NSInteger)assetsPerRow
 {
-    return MAX(1, (NSInteger)floorf(self.tableView.contentSize.width / ASSET_WIDTH_WITH_PADDING));
+    if (self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft || 
+        self.interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+        
+        return ASSETS_PER_ROW_LANDSCAPE;
+    } else {
+        return ASSETS_PER_ROW_PORTRAIT;
+    }
 }
 
 #pragma mark - Rotation
@@ -115,7 +125,6 @@
 {
     [self.tableView reloadData];
 }
-
 
 #pragma mark - Fetching Code
 
@@ -132,7 +141,6 @@
         [self.assetsGroup enumerateAssetsWithOptions:NSEnumerationReverse usingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
             
             if (!result || index == NSNotFound) {
-                
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.tableView reloadData];
                     self.navigationItem.title = [NSString stringWithFormat:@"%@", [self.assetsGroup valueForProperty:ALAssetsGroupPropertyName]];
@@ -187,7 +195,9 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    
     return (self.fetchedAssets.count + self.assetsPerRow - 1) / self.assetsPerRow;
 }
 
@@ -233,6 +243,42 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath 
 { 
 	return ROW_HEIGHT;
+}
+
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (![object isEqual:self.assetPickerState]) return;
+    
+    if ([STATE_KEY isEqualToString:keyPath]) {
+        
+        if (WSAssetPickerStateSelectAll == self.assetPickerState.state) {
+            
+            [self.fetchedAssets enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                
+                ((WSAssetWrapper *)obj).selected = YES;
+                [self.assetPickerState changeSelectionState:YES forAsset:obj];
+            }];
+            
+            // Reload visible rows.
+            [self.tableView reloadRowsAtIndexPaths:self.tableView.indexPathsForVisibleRows
+                                  withRowAnimation:UITableViewRowAnimationNone];
+            
+        } else if (WSAssetPickerStateSelectNone == self.assetPickerState.state) {
+            
+            [self.fetchedAssets enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                
+                ((WSAssetWrapper *)obj).selected = NO;
+                [self.assetPickerState changeSelectionState:NO forAsset:obj];
+            }];
+            
+            // Reload visible rows.
+            [self.tableView reloadRowsAtIndexPaths:self.tableView.indexPathsForVisibleRows
+                                  withRowAnimation:UITableViewRowAnimationNone];
+        }
+    }
 }
 
 @end
