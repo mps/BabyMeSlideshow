@@ -13,6 +13,10 @@
 #import <AssetsLibrary/ALAsset.h>
 #import "SVProgressHUD.h"
 
+#define NEWSLIDESHOW_PRIMARY_POSITION			IS_IPHONE_5_SCREEN ? CGRectMake(360, 164, 157, 49) : CGRectMake(312, 164, 157, 49);
+#define SETTINGS_PRIMARY_POSITION				IS_IPHONE_5_SCREEN ? CGRectMake(360, 220, 157, 30) : CGRectMake(312, 220, 157, 30);
+#define SETTINGS_SECONDARY_POSITION				IS_IPHONE_5_SCREEN ? CGRectMake(360, 260, 157, 30) : CGRectMake(312, 260, 157, 30);
+
 @interface ViewController ()<WSAssetPickerControllerDelegate> {
 	NSArray *_selectedPhotos;
 }
@@ -35,6 +39,17 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
+	
+	self.selectPhotosButton.frame = NEWSLIDESHOW_PRIMARY_POSITION;
+	
+	if ([self hasPhotos]) {
+		self.usePreviousPhotosButton.hidden = NO;
+		self.usePreviousPhotosButton.frame = SETTINGS_PRIMARY_POSITION;
+		self.showSettingsButton.frame = SETTINGS_SECONDARY_POSITION;
+	} else {
+		self.usePreviousPhotosButton.hidden = YES;
+		self.showSettingsButton.frame = SETTINGS_PRIMARY_POSITION;
+	}
 	
 	self.usePreviousPhotosButton.hidden = ![self hasPhotos];
 }
