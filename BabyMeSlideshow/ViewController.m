@@ -65,8 +65,7 @@
 - (void)setPhotos:(NSArray *)assets {
 	NSMutableArray *tmpPhotos = [[NSMutableArray alloc] init];
 	
-	for (WSAssetWrapper *wsasset in assets) {
-		ALAsset *asset = wsasset.asset;
+    for (ALAsset *asset in assets) {
 		ALAssetRepresentation* representation = [asset defaultRepresentation];
 		
 		// Retrieve the image orientation from the ALAsset

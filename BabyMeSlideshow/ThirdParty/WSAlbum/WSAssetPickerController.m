@@ -20,6 +20,7 @@
 #import "WSAssetPickerController.h"
 #import "WSAssetPickerState.h"
 #import "WSAlbumTableViewController.h"
+#import "WSAssetWrapper.h"
 
 @interface WSAssetPickerController ()
 @property (nonatomic, strong) WSAssetPickerState *assetPickerState;
@@ -119,7 +120,18 @@
             }
         } else if (WSAssetPickerStatePickingDone == self.assetPickerState.state) {
             if ([delegate conformsToProtocol:@protocol(WSAssetPickerControllerDelegate)]) {
-                [delegate assetPickerController:self didFinishPickingMediaWithAssets:self.assetPickerState.selectedAssets];
+                
+                NSMutableArray *assets = [NSMutableArray array];
+                
+                for (WSAssetWrapper *asset in self.assetPickerState.selectedAssets) {
+                    if ([asset respondsToSelector:@selector(asset)]) {
+                        [assets addObject:asset.asset];
+                    } else {
+                        [assets addObject:asset];
+                    }
+                }
+                
+                [delegate assetPickerController:self didFinishPickingMediaWithAssets:assets];
             }
         }
     } else if ([SELECTED_COUNT_KEY isEqualToString:keyPath]) {
