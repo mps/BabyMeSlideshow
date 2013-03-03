@@ -55,6 +55,7 @@
 		69EAA90916E25B4300EA42C9 /* ipad-slider-track.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EAA90316E25B4300EA42C9 /* ipad-slider-track.png */; };
 		69EAA90A16E25B4300EA42C9 /* ipad-slider-track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EAA90416E25B4300EA42C9 /* ipad-slider-track@2x.png */; };
 		69EAA90D16E25C8200EA42C9 /* WSPickerWithToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EAA90C16E25C8200EA42C9 /* WSPickerWithToolbar.m */; };
+		69FB847716E415CC00CA73F5 /* default-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 69FB847616E415CC00CA73F5 /* default-background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +128,7 @@
 		69EAA90416E25B4300EA42C9 /* ipad-slider-track@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-slider-track@2x.png"; sourceTree = "<group>"; };
 		69EAA90B16E25C8200EA42C9 /* WSPickerWithToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPickerWithToolbar.h; sourceTree = "<group>"; };
 		69EAA90C16E25C8200EA42C9 /* WSPickerWithToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSPickerWithToolbar.m; sourceTree = "<group>"; };
+		69FB847616E415CC00CA73F5 /* default-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-background.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 		6959700616DAE3780021868B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				69FB847616E415CC00CA73F5 /* default-background.png */,
 				69EAA8FF16E25B4300EA42C9 /* ipad-slider-fill.png */,
 				69EAA90016E25B4300EA42C9 /* ipad-slider-fill@2x.png */,
 				69EAA90116E25B4300EA42C9 /* ipad-slider-handle.png */,
@@ -379,6 +382,7 @@
 				69700BA316E29ABD0058FC7F /* home_iphone5.png in Resources */,
 				69700BA416E29ABD0058FC7F /* home.png in Resources */,
 				69700BA516E29ABD0058FC7F /* home@2x.png in Resources */,
+				69FB847716E415CC00CA73F5 /* default-background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
