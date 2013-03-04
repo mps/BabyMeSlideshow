@@ -44,8 +44,6 @@
     
     if (IS_IPHONE_5_SCREEN) {
         self.backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"home"]];
-//        [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"home"]]];
-        
     }
 }
 
@@ -64,6 +62,8 @@
 	}
 	
 	self.usePreviousPhotosButton.hidden = ![self hasPhotos];
+    
+    self.aboutButton.frame = ABOUT_PRIMARY_POSITION;
 }
 
 //- (BOOL)shouldAutorotate {
