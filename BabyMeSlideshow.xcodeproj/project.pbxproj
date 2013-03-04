@@ -58,6 +58,7 @@
 		69FB847716E415CC00CA73F5 /* default-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 69FB847616E415CC00CA73F5 /* default-background.png */; };
 		69FB847B16E41AD200CA73F5 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69FB847916E41AD200CA73F5 /* AboutViewController.m */; };
 		69FB847C16E41AD200CA73F5 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69FB847A16E41AD200CA73F5 /* AboutViewController.xib */; };
+		69FB847F16E4202B00CA73F5 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FB847E16E4202B00CA73F5 /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +135,7 @@
 		69FB847816E41AD200CA73F5 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		69FB847916E41AD200CA73F5 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		69FB847A16E41AD200CA73F5 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		69FB847E16E4202B00CA73F5 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				69596FC916DADE890021868B /* UIKit.framework in Frameworks */,
 				69596FCB16DADE890021868B /* Foundation.framework in Frameworks */,
 				69596FCD16DADE890021868B /* CoreGraphics.framework in Frameworks */,
+				69FB847F16E4202B00CA73F5 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +177,7 @@
 			children = (
 				6959700316DAE1950021868B /* AssetsLibrary.framework */,
 				69596FCC16DADE890021868B /* CoreGraphics.framework */,
+				69FB847E16E4202B00CA73F5 /* Crashlytics.framework */,
 				69596FCA16DADE890021868B /* Foundation.framework */,
 				69E41EEB16DBC0BE00C27C9D /* QuartzCore.framework */,
 				69596FC816DADE890021868B /* UIKit.framework */,
@@ -322,6 +326,7 @@
 				69596FC116DADE890021868B /* Sources */,
 				69596FC216DADE890021868B /* Frameworks */,
 				69596FC316DADE890021868B /* Resources */,
+				69FB847D16E4201900CA73F5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -396,6 +401,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69FB847D16E4201900CA73F5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 907acff10b7b639198aadbeb5eca1950ffbfb149";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		69596FC116DADE890021868B /* Sources */ = {
@@ -503,6 +524,10 @@
 		69596FE916DADE890021868B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BabyMeSlideshow/BabyMeSlideshow-Prefix.pch";
 				INFOPLIST_FILE = "BabyMeSlideshow/BabyMeSlideshow-Info.plist";
@@ -515,6 +540,10 @@
 		69596FEA16DADE890021868B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BabyMeSlideshow/BabyMeSlideshow-Prefix.pch";
 				INFOPLIST_FILE = "BabyMeSlideshow/BabyMeSlideshow-Info.plist";

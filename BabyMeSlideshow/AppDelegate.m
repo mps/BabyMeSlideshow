@@ -9,17 +9,21 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "UIImage+iPhone5.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	[self applyStyleSheet];
+    
+    [Crashlytics startWithAPIKey:@"907acff10b7b639198aadbeb5eca1950ffbfb149"];
 	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 	self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
