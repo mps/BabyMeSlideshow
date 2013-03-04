@@ -94,22 +94,13 @@
 
 - (void)setPhotos:(NSArray *)assets {
 	NSMutableArray *tmpPhotos = [[NSMutableArray alloc] init];
-	
+
     for (ALAsset *asset in assets) {
-		ALAssetRepresentation* representation = [asset defaultRepresentation];
-		
-		// Retrieve the image orientation from the ALAsset
-		UIImageOrientation orientation = UIImageOrientationUp;
-		NSNumber* orientationValue = [asset valueForProperty:@"ALAssetPropertyOrientation"];
-		if (orientationValue != nil) {
-			orientation = [orientationValue intValue];
-		}
-		
-		CGFloat scale  = 1;
-		UIImage* image = [UIImage imageWithCGImage:[representation fullResolutionImage]
-											 scale:scale
-									   orientation:orientation];
-		[tmpPhotos addObject:image];
+        ALAssetRepresentation *rep = [asset defaultRepresentation];
+        CGImageRef iref = [rep fullResolutionImage];
+        if (iref != nil) {
+            [tmpPhotos addObject:[UIImage imageWithCGImage:iref]];
+        }
 	}
 	_selectedPhotos = tmpPhotos;
 }
@@ -135,13 +126,11 @@
 - (IBAction)showAbout:(id)sender {
 	AboutViewController *about = [[AboutViewController alloc] init];
 	[self presentViewController:about animated:YES completion:nil];
-	
 }
 
 - (IBAction)showSettings:(id)sender {
 	SettingsViewController *settings = [[SettingsViewController alloc] init];
 	[self presentViewController:settings animated:YES completion:nil];
-	
 }
 
 #pragma mark - WSAssetPickerControllerDelegate
