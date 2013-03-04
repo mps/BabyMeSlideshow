@@ -31,13 +31,11 @@
 
 + (void)setPhotoDuration:(float)duration {
 	[[NSUserDefaults standardUserDefaults] setFloat:duration forKey:KEY_FOR_PHOTO_DURATION];
+	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 + (void)setFadeDuration:(float)duration {
 	[[NSUserDefaults standardUserDefaults] setFloat:duration forKey:KEY_FOR_FADE_DURATION];
-}
-
-- (void)saveToDisk {
 	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 

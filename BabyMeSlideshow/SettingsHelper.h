@@ -14,6 +14,5 @@
 + (float)getFadeDuration;
 + (void)setPhotoDuration:(float)duration;
 + (void)setFadeDuration:(float)duration;
-- (void)saveToDisk;
 
 @end
