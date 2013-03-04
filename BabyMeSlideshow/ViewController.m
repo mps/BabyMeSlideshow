@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "WSAssetPicker.h"
 #import "WSPickerWithToolbar.h"
+#import "AboutViewController.h"
 #import "SettingsViewController.h"
 #import "SlideshowViewController.h"
 #import <AssetsLibrary/ALAsset.h>
@@ -19,6 +20,7 @@
 #define USEPREVIOUS_PRIMARY_POSITION			IS_IPHONE_5_SCREEN ? CGRectMake(320, 200, 157, 30) : CGRectMake(275, 200, 157, 30);
 #define SETTINGS_PRIMARY_POSITION				IS_IPHONE_5_SCREEN ? CGRectMake(320, 220, 157, 30) : CGRectMake(275, 220, 157, 30);
 #define SETTINGS_SECONDARY_POSITION				IS_IPHONE_5_SCREEN ? CGRectMake(320, 240, 157, 30) : CGRectMake(275, 240, 157, 30);
+#define ABOUT_PRIMARY_POSITION                  IS_IPHONE_5_SCREEN ? CGRectMake(451, 5, 18, 19)    : CGRectMake(406, 5, 18, 19);
 
 @interface ViewController ()<WSAssetPickerControllerDelegate> {
 	NSArray *_selectedPhotos;
@@ -27,6 +29,7 @@
 @property (nonatomic) IBOutlet UIButton *selectPhotosButton;
 @property (nonatomic) IBOutlet UIButton *usePreviousPhotosButton;
 @property (nonatomic) IBOutlet UIButton *showSettingsButton;
+@property (nonatomic) IBOutlet UIButton *aboutButton;
 @property (nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (nonatomic) WSAssetPickerController *picker;
 
@@ -127,6 +130,12 @@
 	if ([self hasPhotos]) {
 		[self showSlideshow];
 	}
+}
+
+- (IBAction)showAbout:(id)sender {
+	AboutViewController *about = [[AboutViewController alloc] init];
+	[self presentViewController:about animated:YES completion:nil];
+	
 }
 
 - (IBAction)showSettings:(id)sender {

@@ -14,6 +14,8 @@
 
 - (IBAction)usePreviousPhotosForSlideshow:(id)sender;
 
+- (IBAction)showAbout:(id)sender;
+
 - (IBAction)showSettings:(id)sender;
 
 @end

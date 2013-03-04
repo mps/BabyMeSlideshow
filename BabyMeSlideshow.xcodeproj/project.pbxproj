@@ -56,6 +56,8 @@
 		69EAA90A16E25B4300EA42C9 /* ipad-slider-track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EAA90416E25B4300EA42C9 /* ipad-slider-track@2x.png */; };
 		69EAA90D16E25C8200EA42C9 /* WSPickerWithToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EAA90C16E25C8200EA42C9 /* WSPickerWithToolbar.m */; };
 		69FB847716E415CC00CA73F5 /* default-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 69FB847616E415CC00CA73F5 /* default-background.png */; };
+		69FB847B16E41AD200CA73F5 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69FB847916E41AD200CA73F5 /* AboutViewController.m */; };
+		69FB847C16E41AD200CA73F5 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69FB847A16E41AD200CA73F5 /* AboutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +131,9 @@
 		69EAA90B16E25C8200EA42C9 /* WSPickerWithToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPickerWithToolbar.h; sourceTree = "<group>"; };
 		69EAA90C16E25C8200EA42C9 /* WSPickerWithToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSPickerWithToolbar.m; sourceTree = "<group>"; };
 		69FB847616E415CC00CA73F5 /* default-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-background.png"; sourceTree = "<group>"; };
+		69FB847816E41AD200CA73F5 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		69FB847916E41AD200CA73F5 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		69FB847A16E41AD200CA73F5 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +184,9 @@
 		69596FCE16DADE890021868B /* BabyMeSlideshow */ = {
 			isa = PBXGroup;
 			children = (
+				69FB847816E41AD200CA73F5 /* AboutViewController.h */,
+				69FB847916E41AD200CA73F5 /* AboutViewController.m */,
+				69FB847A16E41AD200CA73F5 /* AboutViewController.xib */,
 				69E41EC916DBB09800C27C9D /* AppDefaults.h */,
 				69596FD716DADE890021868B /* AppDelegate.h */,
 				69596FD816DADE890021868B /* AppDelegate.m */,
@@ -383,6 +391,7 @@
 				69700BA416E29ABD0058FC7F /* home.png in Resources */,
 				69700BA516E29ABD0058FC7F /* home@2x.png in Resources */,
 				69FB847716E415CC00CA73F5 /* default-background.png in Resources */,
+				69FB847C16E41AD200CA73F5 /* AboutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +418,7 @@
 				69E41EEA16DBC0B200C27C9D /* WSAssetWrapper.m in Sources */,
 				69EAA8FE16E25B0100EA42C9 /* UIImage+iPhone5.m in Sources */,
 				69EAA90D16E25C8200EA42C9 /* WSPickerWithToolbar.m in Sources */,
+				69FB847B16E41AD200CA73F5 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
