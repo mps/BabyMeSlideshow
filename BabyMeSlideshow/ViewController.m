@@ -94,13 +94,18 @@
 
 - (void)setPhotos:(NSArray *)assets {
 	NSMutableArray *tmpPhotos = [[NSMutableArray alloc] init];
+    
+    int count = 1;
 
     for (ALAsset *asset in assets) {
+        if (count > 15) break;
+        
         ALAssetRepresentation *rep = [asset defaultRepresentation];
         CGImageRef iref = [rep fullResolutionImage];
         if (iref != nil) {
             [tmpPhotos addObject:[UIImage imageWithCGImage:iref]];
         }
+        count++;
 	}
 	_selectedPhotos = tmpPhotos;
 }
