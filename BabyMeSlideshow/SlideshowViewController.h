@@ -12,4 +12,6 @@
 
 - (id)initWithPhotos:(NSMutableArray *)photos;
 
+- (IBAction)tapExit:(id)sender;
+
 @end
