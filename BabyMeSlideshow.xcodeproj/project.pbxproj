@@ -540,6 +540,8 @@
 		69596FE916DADE890021868B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Strickland (XKH5HACUZT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew Strickland (XKH5HACUZT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -549,6 +551,8 @@
 				INFOPLIST_FILE = "BabyMeSlideshow/BabyMeSlideshow-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7EC38377-A312-465B-A5CE-9B79123B1ACC";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AE2077C9-BC62-48D1-B72A-64AEA73D98ED";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -556,6 +560,8 @@
 		69596FEA16DADE890021868B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Strickland (XKH5HACUZT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew Strickland (XKH5HACUZT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -565,6 +571,8 @@
 				INFOPLIST_FILE = "BabyMeSlideshow/BabyMeSlideshow-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7EC38377-A312-465B-A5CE-9B79123B1ACC";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AE2077C9-BC62-48D1-B72A-64AEA73D98ED";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
