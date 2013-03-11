@@ -493,7 +493,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Strickland (XKH5HACUZT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew Strickland (XKH5HACUZT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -508,6 +509,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "BE810D63-6EFE-4288-8E14-BADDCE10D017";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BE810D63-6EFE-4288-8E14-BADDCE10D017";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -524,7 +527,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Matthew Strickland";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Matthew Strickland";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -532,6 +536,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "63859495-7454-496D-84E9-27130CE9698E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "63859495-7454-496D-84E9-27130CE9698E";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -540,7 +546,7 @@
 		69596FE916DADE890021868B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Strickland (XKH5HACUZT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew Strickland (XKH5HACUZT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -551,8 +557,8 @@
 				INFOPLIST_FILE = "BabyMeSlideshow/BabyMeSlideshow-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7EC38377-A312-465B-A5CE-9B79123B1ACC";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AE2077C9-BC62-48D1-B72A-64AEA73D98ED";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BE810D63-6EFE-4288-8E14-BADDCE10D017";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -560,8 +566,8 @@
 		69596FEA16DADE890021868B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Strickland (XKH5HACUZT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew Strickland (XKH5HACUZT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Matthew Strickland";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -571,8 +577,8 @@
 				INFOPLIST_FILE = "BabyMeSlideshow/BabyMeSlideshow-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7EC38377-A312-465B-A5CE-9B79123B1ACC";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AE2077C9-BC62-48D1-B72A-64AEA73D98ED";
+				PROVISIONING_PROFILE = "63859495-7454-496D-84E9-27130CE9698E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
