@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1552</int>
-		<string key="IBDocument.SystemVersion">12C60</string>
+		<string key="IBDocument.SystemVersion">12C3012</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
 		<string key="IBDocument.AppKitVersion">1187.34</string>
 		<string key="IBDocument.HIToolboxVersion">625.00</string>
@@ -55,28 +55,27 @@
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">1316</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{312, 246}, {157, 30}}</string>
+						<string key="NSFrame">{{248, 166}, {71, 71}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="166650131"/>
+						<reference key="NSNextKeyView" ref="254186292"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<string key="IBUITitleShadowOffset">{0, -1}</string>
-						<string key="IBUINormalTitle">Settings</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="746670683">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
 						</object>
 						<reference key="IBUINormalTitleColor" ref="746670683"/>
-						<object class="NSColor" key="IBUINormalTitleShadowColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MCAwLjE4MDM5MjE1NjkgMC4zMzcyNTQ5MDIgMC42NwA</bytes>
-						</object>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="158247366">
+						<object class="NSCustomResource" key="IBUIHighlightedImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">ipad-button-blue.png</string>
+							<string key="NSResourceName">settings-button-active.png</string>
+						</object>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">settings-button.png</string>
 						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="507850084">
 							<int key="type">2</int>
@@ -92,10 +91,10 @@
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">1316</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{312, 227}, {157, 30}}</string>
+						<string key="NSFrame">{{354, 140}, {123, 123}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="525472627"/>
+						<reference key="NSNextKeyView" ref="166650131"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -104,11 +103,14 @@
 						<string key="IBUINormalTitle">Use Previous</string>
 						<reference key="IBUIHighlightedTitleColor" ref="746670683"/>
 						<reference key="IBUINormalTitleColor" ref="746670683"/>
-						<object class="NSColor" key="IBUINormalTitleShadowColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MCAwLjE4MDM5MjE1NjkgMC4zMzcyNTQ5MDIgMC42NwA</bytes>
+						<object class="NSCustomResource" key="IBUIHighlightedImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">use-previous-button-active.png</string>
 						</object>
-						<reference key="IBUINormalBackgroundImage" ref="158247366"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">use-previous-button.png</string>
+						</object>
 						<reference key="IBUIFontDescription" ref="507850084"/>
 						<reference key="IBUIFont" ref="564198494"/>
 					</object>
@@ -116,25 +118,24 @@
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">1316</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{107, 236}, {157, 49}}</string>
+						<string key="NSFrame">{{90, 140}, {123, 123}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="254186292"/>
+						<reference key="NSNextKeyView" ref="525472627"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<string key="IBUITitleShadowOffset">{0, -1}</string>
-						<string key="IBUINormalTitle">New Slideshow</string>
 						<reference key="IBUIHighlightedTitleColor" ref="746670683"/>
 						<reference key="IBUINormalTitleColor" ref="746670683"/>
-						<object class="NSColor" key="IBUINormalTitleShadowColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MCAwLjE4MDM5MjE1NjkgMC4zMzcyNTQ5MDIgMC42NwA</bytes>
-						</object>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+						<object class="NSCustomResource" key="IBUIHighlightedImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">ipad-button-green.png</string>
+							<string key="NSResourceName">new-slideshow-button-active.png</string>
+						</object>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">new-slideshow-button.png</string>
 						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
 							<int key="type">2</int>
@@ -152,7 +153,6 @@
 						<string key="NSFrame">{{440, 270}, {18, 19}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -186,7 +186,9 @@
 				<reference key="NSNextKeyView" ref="460506826"/>
 				<reference key="IBUIBackgroundColor" ref="746670683"/>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
-				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
+				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics">
+					<int key="IBUIStatusBarStyle">1</int>
+				</object>
 				<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 					<int key="IBUIInterfaceOrientation">3</int>
 					<int key="interfaceOrientation">3</int>
@@ -321,11 +323,11 @@
 						<int key="objectID">6</int>
 						<reference key="object" ref="774585933"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="254186292"/>
-							<reference ref="919592580"/>
-							<reference ref="525472627"/>
 							<reference ref="460506826"/>
 							<reference ref="166650131"/>
+							<reference ref="919592580"/>
+							<reference ref="525472627"/>
+							<reference ref="254186292"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -363,15 +365,15 @@
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="24.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<real value="1" key="24.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<real value="0.0" key="24.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<reference key="24.IBUserGuides" ref="0"/>
 				<boolean value="NO" key="24.showNotes"/>
 				<string key="29.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<real value="1" key="29.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<real value="0.0" key="29.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<reference key="29.IBUserGuides" ref="0"/>
 				<boolean value="NO" key="29.showNotes"/>
 				<string key="33.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<real value="1" key="33.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<real value="0.0" key="33.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<reference key="33.IBUserGuides" ref="0"/>
 				<boolean value="NO" key="33.showNotes"/>
 				<string key="37.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -455,8 +457,12 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="home_iphone5.png">{1136, 640}</string>
-			<string key="ipad-button-blue.png">{157, 49}</string>
-			<string key="ipad-button-green.png">{159, 51}</string>
+			<string key="new-slideshow-button-active.png">{123, 123}</string>
+			<string key="new-slideshow-button.png">{123, 123}</string>
+			<string key="settings-button-active.png">{71, 71}</string>
+			<string key="settings-button.png">{71, 71}</string>
+			<string key="use-previous-button-active.png">{123, 123}</string>
+			<string key="use-previous-button.png">{123, 123}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
 	</data>

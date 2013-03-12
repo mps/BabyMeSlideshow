@@ -16,10 +16,9 @@
 #import "SVProgressHUD.h"
 #import "WSAssetWrapper.h"
 
-#define NEWSLIDESHOW_PRIMARY_POSITION	IS_IPHONE_5_SCREEN ? CGRectMake(107, 210, 157, 49) : CGRectMake(70, 210, 157, 49);
-#define USEPREVIOUS_PRIMARY_POSITION	IS_IPHONE_5_SCREEN ? CGRectMake(320, 200, 157, 30) : CGRectMake(275, 200, 157, 30);
-#define SETTINGS_PRIMARY_POSITION		IS_IPHONE_5_SCREEN ? CGRectMake(320, 220, 157, 30) : CGRectMake(275, 220, 157, 30);
-#define SETTINGS_SECONDARY_POSITION		IS_IPHONE_5_SCREEN ? CGRectMake(320, 240, 157, 30) : CGRectMake(275, 240, 157, 30);
+#define NEWSLIDESHOW_PRIMARY_POSITION	IS_IPHONE_5_SCREEN ? CGRectMake(90, 140, 123, 123) : CGRectMake(47, 140, 123, 123);
+#define USEPREVIOUS_PRIMARY_POSITION	IS_IPHONE_5_SCREEN ? CGRectMake(354, 140, 123, 123) : CGRectMake(311, 140, 123, 123);
+#define SETTINGS_PRIMARY_POSITION		IS_IPHONE_5_SCREEN ? CGRectMake(248, 166, 71, 71) : CGRectMake(205, 166, 71, 71);
 #define ABOUT_PRIMARY_POSITION          IS_IPHONE_5_SCREEN ? CGRectMake(540, 270, 18, 19)  : CGRectMake(420, 270, 18, 19);
 
 @interface ViewController ()<WSAssetPickerControllerDelegate> {
@@ -42,7 +41,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (IS_IPHONE_5_SCREEN) {
+    if (!IS_IPHONE_5_SCREEN) {
         self.backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"home"]];
     }
 }
@@ -51,14 +50,13 @@
 	[super viewWillAppear:animated];
 	
 	self.selectPhotosButton.frame = NEWSLIDESHOW_PRIMARY_POSITION;
+    self.showSettingsButton.frame = SETTINGS_PRIMARY_POSITION;
 	
 	if ([self hasPhotos]) {
 		self.usePreviousPhotosButton.hidden = NO;
 		self.usePreviousPhotosButton.frame = USEPREVIOUS_PRIMARY_POSITION;
-		self.showSettingsButton.frame = SETTINGS_SECONDARY_POSITION;
 	} else {
 		self.usePreviousPhotosButton.hidden = YES;
-		self.showSettingsButton.frame = SETTINGS_PRIMARY_POSITION;
 	}
 	
 	self.usePreviousPhotosButton.hidden = ![self hasPhotos];

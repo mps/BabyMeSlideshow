@@ -9,6 +9,9 @@
 #import "SlideshowViewController.h"
 #import "SettingsHelper.h"
 
+#define EXIT_BUTTON_POSITION	IS_IPHONE_5_SCREEN ? CGRectMake(460, 20, 30, 30) : CGRectMake(400, 20, 30, 30);
+#define EXIT_MESSAGE_POSITION	IS_IPHONE_5_SCREEN ? CGRectMake(192, 21, 184, 28) : CGRectMake(148, 21, 184, 28);
+
 @interface SlideshowViewController () <UIAlertViewDelegate> {
 	NSMutableArray *_photos;
     NSTimer *timer;
@@ -18,8 +21,8 @@
 }
 
 @property (nonatomic) IBOutlet UIImageView *photoView;
+@property (nonatomic) IBOutlet UIImageView *exitView;
 @property (nonatomic) IBOutlet UIButton *exitButton;
-@property (nonatomic) IBOutlet UILabel *exitLabel;
 
 @end
 
@@ -46,7 +49,10 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
     
-    self.exitLabel.hidden = YES;
+    self.exitButton.frame = EXIT_BUTTON_POSITION;
+    self.exitView.frame = EXIT_MESSAGE_POSITION;
+    
+    self.exitView.hidden = YES;
 	
 	[self setImage:[_photos objectAtIndex:currentImage]];
 	[self startTimer];
@@ -109,17 +115,8 @@
 }
 
 - (void)handleLabelExitTimer:(NSTimer *)timer {
-    
-	void (^change)(void) = ^{
-		self.exitLabel.alpha = 0.0f;
-	};
-    
-	void (^completion)(BOOL finished) = ^(BOOL finished) {
-        self.exitLabel.hidden = YES;
-        self.exitLabel.alpha = 1.0f;
-        exitLabelTapped = NO;
-	};
-		[UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionAllowUserInteraction animations:change completion:completion];
+    self.exitView.hidden = YES;
+    exitLabelTapped = NO;
 }
 
 - (void)longPress:(UILongPressGestureRecognizer*)gesture {
@@ -143,7 +140,7 @@
     if (exitLabelTapped) return;
     
     exitLabelTapped = YES;
-    self.exitLabel.hidden = NO;
+    self.exitView.hidden = NO;
     
     [self startExitLabelTimer];
 }
