@@ -64,26 +64,6 @@
     self.aboutButton.frame = ABOUT_PRIMARY_POSITION;
 }
 
-//- (BOOL)shouldAutorotate {
-//    if (([[UIDevice currentDevice] orientation] == UIInterfaceOrientationLandscapeLeft) ||
-//        ([[UIDevice currentDevice] orientation] == UIInterfaceOrientationLandscapeRight))
-//        return YES;
-//    
-//    return NO;
-//}
-//
-//- (NSUInteger)supportedInterfaceOrientations {
-//    return UIInterfaceOrientationLandscapeLeft | UIInterfaceOrientationLandscapeRight;
-//}
-//
-//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orientation {
-//    if ((orientation == UIInterfaceOrientationLandscapeLeft) ||
-//        (orientation == UIInterfaceOrientationLandscapeRight))
-//        return YES;
-//    
-//    return NO;
-//}
-
 #pragma mark - Methods
 
 - (BOOL)hasPhotos {
@@ -93,18 +73,10 @@
 - (void)setPhotos:(NSArray *)assets {
 	NSMutableArray *tmpPhotos = [[NSMutableArray alloc] init];
     
-    int count = 1;
-
     for (ALAsset *asset in assets) {
-        if (count > 15) break;
-        
-        ALAssetRepresentation *rep = [asset defaultRepresentation];
-        CGImageRef iref = [rep fullResolutionImage];
-        if (iref != nil) {
-            [tmpPhotos addObject:[UIImage imageWithCGImage:iref]];
-        }
-        count++;
-	}
+        ALAssetRepresentation *rep = [asset defaultRepresentation];		
+		[tmpPhotos addObject:[rep url]];
+    }
 	_selectedPhotos = tmpPhotos;
 }
 
