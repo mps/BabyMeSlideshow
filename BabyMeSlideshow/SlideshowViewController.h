@@ -10,7 +10,7 @@
 
 @interface SlideshowViewController : UIViewController
 
-- (id)initWithPhotos:(NSMutableArray *)photos;
+- (id)initWithPhotos:(NSMutableArray *)photoUrls;
 
 - (IBAction)tapExit:(id)sender;
 
