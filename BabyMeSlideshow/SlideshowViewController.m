@@ -8,15 +8,17 @@
 
 #import "SlideshowViewController.h"
 #import "SettingsHelper.h"
+#import <AssetsLibrary/ALAsset.h>
+#import "WSPickerWithToolbar.h"
 
 #define EXIT_BUTTON_POSITION	IS_IPHONE_5_SCREEN ? CGRectMake(460, 20, 30, 30) : CGRectMake(400, 20, 30, 30);
 #define EXIT_MESSAGE_POSITION	IS_IPHONE_5_SCREEN ? CGRectMake(192, 21, 184, 28) : CGRectMake(148, 21, 184, 28);
 
 @interface SlideshowViewController () <UIAlertViewDelegate> {
-	NSMutableArray *_photos;
+	NSMutableArray *_photoUrls;
     NSTimer *timer;
     NSTimer *exitLabelTimer;
-    int currentImage;
+    int currentImageUrlIndex;
     BOOL exitLabelTapped;
 }
 
@@ -28,9 +30,9 @@
 
 @implementation SlideshowViewController
 
-- (id)initWithPhotos:(NSMutableArray *)photos {
+- (id)initWithPhotos:(NSMutableArray *)photoUrls {
 	if (self = [super init]) {
-		_photos = photos;
+		_photoUrls = photoUrls;
 	}
 	return self;
 }
@@ -54,34 +56,31 @@
     
     self.exitView.hidden = YES;
 	
-	[self setImage:[_photos objectAtIndex:currentImage]];
+	[self setImageForUrl:[_photoUrls objectAtIndex:currentImageUrlIndex]];
 	[self startTimer];
 }
 
-//- (BOOL)shouldAutorotate {
-//    if (([[UIDevice currentDevice] orientation] == UIInterfaceOrientationLandscapeLeft) ||
-//        ([[UIDevice currentDevice] orientation] == UIInterfaceOrientationLandscapeRight))
-//        return YES;
-//    
-//    return NO;
-//}
-//
-//- (NSUInteger)supportedInterfaceOrientations {
-//    return UIInterfaceOrientationLandscapeLeft | UIInterfaceOrientationLandscapeRight;
-//}
-//
-//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orientation {
-//    if ((orientation == UIInterfaceOrientationLandscapeLeft) ||
-//        (orientation == UIInterfaceOrientationLandscapeRight))
-//        return YES;
-//    
-//    return NO;
-//}
-
 #pragma mark - Methods
 
-- (void)setImage:(UIImage *)image {
-	self.photoView.image = image;
+- (void)setImageForUrl:(NSURL *)imageUrl {
+	ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
+    {
+        ALAssetRepresentation *rep = [myasset defaultRepresentation];
+        CGImageRef iref = [rep fullResolutionImage];
+        if (iref) {
+			self.photoView.image = [UIImage imageWithCGImage:iref];
+        }
+    };
+	
+    ALAssetsLibraryAccessFailureBlock failureblock  = ^(NSError *myerror)
+    {
+        NSLog(@"cannot load image - %@",[myerror localizedDescription]);
+    };
+	
+	ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init];
+	[assetslibrary assetForURL:imageUrl
+				   resultBlock:resultblock
+				  failureBlock:failureblock];
 }
 
 - (void)startTimer {
@@ -93,16 +92,15 @@
 }
 
 - (void)handleTimer:(NSTimer *)timer {
-    currentImage++;
-    if ( currentImage >= _photos.count )
-        currentImage = 0;
+    currentImageUrlIndex++;
+    if ( currentImageUrlIndex >= _photoUrls.count )
+        currentImageUrlIndex = 0;
 	
-	UIImage * toImage = [_photos objectAtIndex:currentImage];
 	[UIView transitionWithView:self.view
 					  duration:[SettingsHelper getFadeDuration]
 					   options:UIViewAnimationOptionTransitionCrossDissolve
 					animations:^{
-						[self setImage:toImage];
+						[self setImageForUrl:[_photoUrls objectAtIndex:currentImageUrlIndex]];
 					} completion:NULL];
 }
 

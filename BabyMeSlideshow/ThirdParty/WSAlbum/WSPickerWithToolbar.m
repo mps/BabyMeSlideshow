@@ -19,7 +19,7 @@
     [super viewDidLoad];
 
     // Setup toolbar items.
-    UIBarButtonItem *selectAllItem = [[UIBarButtonItem alloc] initWithTitle:@"Select up to 15 Photos"
+    UIBarButtonItem *selectAllItem = [[UIBarButtonItem alloc] initWithTitle:@"Select All"
                                                                       style:UIBarButtonItemStyleBordered
                                                                      target:self    
                                                                      action:@selector(selectAll)];
