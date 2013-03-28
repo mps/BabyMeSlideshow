@@ -46,6 +46,10 @@
 		69A1524D16EED20C0092591C /* ipad-button-green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A1524B16EED20C0092591C /* ipad-button-green@2x.png */; };
 		69A1525016EED2440092591C /* press-and-hold-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A1524E16EED2440092591C /* press-and-hold-banner.png */; };
 		69A1525116EED2440092591C /* press-and-hold-banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A1524F16EED2440092591C /* press-and-hold-banner@2x.png */; };
+		69B21F831703C8E000B9C4B8 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B21F811703C8E000B9C4B8 /* Appirater.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		69B21F851703C90E00B9C4B8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B21F841703C90E00B9C4B8 /* CFNetwork.framework */; };
+		69B21F871703C91B00B9C4B8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B21F861703C91B00B9C4B8 /* SystemConfiguration.framework */; };
+		69B21F891703C92900B9C4B8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B21F881703C92900B9C4B8 /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		69E41EC716DBAC1B00C27C9D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E41EC516DBAC1B00C27C9D /* SettingsViewController.m */; };
 		69E41EC816DBAC1B00C27C9D /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E41EC616DBAC1B00C27C9D /* SettingsViewController.xib */; };
 		69E41ECC16DBB24800C27C9D /* SettingsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E41ECB16DBB24800C27C9D /* SettingsHelper.m */; };
@@ -119,6 +123,12 @@
 		69A1524B16EED20C0092591C /* ipad-button-green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-button-green@2x.png"; sourceTree = "<group>"; };
 		69A1524E16EED2440092591C /* press-and-hold-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "press-and-hold-banner.png"; sourceTree = "<group>"; };
 		69A1524F16EED2440092591C /* press-and-hold-banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "press-and-hold-banner@2x.png"; sourceTree = "<group>"; };
+		69B21F801703C8E000B9C4B8 /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
+		69B21F811703C8E000B9C4B8 /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
+		69B21F821703C8E000B9C4B8 /* AppiraterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppiraterDelegate.h; sourceTree = "<group>"; };
+		69B21F841703C90E00B9C4B8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		69B21F861703C91B00B9C4B8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		69B21F881703C92900B9C4B8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		69E41EC416DBAC1B00C27C9D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		69E41EC516DBAC1B00C27C9D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		69E41EC616DBAC1B00C27C9D /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
@@ -167,6 +177,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69B21F891703C92900B9C4B8 /* StoreKit.framework in Frameworks */,
+				69B21F871703C91B00B9C4B8 /* SystemConfiguration.framework in Frameworks */,
+				69B21F851703C90E00B9C4B8 /* CFNetwork.framework in Frameworks */,
 				69E41EEC16DBC0BE00C27C9D /* QuartzCore.framework in Frameworks */,
 				6959700416DAE1950021868B /* AssetsLibrary.framework in Frameworks */,
 				69596FC916DADE890021868B /* UIKit.framework in Frameworks */,
@@ -201,6 +214,9 @@
 		69596FC716DADE890021868B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				69B21F881703C92900B9C4B8 /* StoreKit.framework */,
+				69B21F861703C91B00B9C4B8 /* SystemConfiguration.framework */,
+				69B21F841703C90E00B9C4B8 /* CFNetwork.framework */,
 				6959700316DAE1950021868B /* AssetsLibrary.framework */,
 				69596FCC16DADE890021868B /* CoreGraphics.framework */,
 				69FB847E16E4202B00CA73F5 /* Crashlytics.framework */,
@@ -257,6 +273,7 @@
 		69596FEB16DAE17A0021868B /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				69B21F7F1703C8E000B9C4B8 /* Appirater */,
 				69E41ECD16DBC0B200C27C9D /* SVProgressHUD */,
 				69E41ED116DBC0B200C27C9D /* WSAlbum */,
 			);
@@ -306,6 +323,16 @@
 				6959700816DAE3780021868B /* WSAssetViewSelectionIndicator@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		69B21F7F1703C8E000B9C4B8 /* Appirater */ = {
+			isa = PBXGroup;
+			children = (
+				69B21F801703C8E000B9C4B8 /* Appirater.h */,
+				69B21F811703C8E000B9C4B8 /* Appirater.m */,
+				69B21F821703C8E000B9C4B8 /* AppiraterDelegate.h */,
+			);
+			path = Appirater;
 			sourceTree = "<group>";
 		};
 		69E41ECD16DBC0B200C27C9D /* SVProgressHUD */ = {
@@ -479,6 +506,7 @@
 				69EAA8FE16E25B0100EA42C9 /* UIImage+iPhone5.m in Sources */,
 				69EAA90D16E25C8200EA42C9 /* WSPickerWithToolbar.m in Sources */,
 				69FB847B16E41AD200CA73F5 /* AboutViewController.m in Sources */,
+				69B21F831703C8E000B9C4B8 /* Appirater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
