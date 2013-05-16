@@ -48,7 +48,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">home_iphone5.png</string>
+							<string key="NSResourceName">home-ipad.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="968044402">
@@ -447,7 +447,7 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="home_iphone5.png">{1136, 640}</string>
+			<string key="home-ipad.png">{1024, 768}</string>
 			<string key="new-slideshow-button-active.png">{123, 123}</string>
 			<string key="new-slideshow-button.png">{123, 123}</string>
 			<string key="settings-button-active.png">{71, 71}</string>

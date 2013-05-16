@@ -49,7 +49,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">default-background.png</string>
+							<string key="NSResourceName">default-background-ipad.png</string>
 						</object>
 					</object>
 					<object class="IBUILabel" id="147028308">
@@ -201,6 +201,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{394, 433}, {157, 49}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -425,7 +426,7 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="default-background.png">{1136, 640}</string>
+			<string key="default-background-ipad.png">{1024, 768}</string>
 			<string key="ipad-button-green.png">{159, 51}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
