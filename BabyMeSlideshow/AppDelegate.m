@@ -10,11 +10,20 @@
 #import "ViewController.h"
 #import "UIImage+iPhone5.h"
 #import <Crashlytics/Crashlytics.h>
+#import "Appirater.h"
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    [Crashlytics startWithAPIKey:@"907acff10b7b639198aadbeb5eca1950ffbfb149"];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[Appirater setAppId:@"612532871"]; // iPad
+	} else {
+		[Appirater setAppId:@"612532871"];
+	}
+	
+	[Appirater setUsesUntilPrompt:10];
+    
+	[Crashlytics startWithAPIKey:@"907acff10b7b639198aadbeb5eca1950ffbfb149"];
 	
 	[self applyStyleSheet];
 	
@@ -23,6 +32,8 @@
 	self.viewController = [[ViewController alloc] init];
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+	
+	[Appirater appLaunched:YES];
     
     return YES;
 }
@@ -39,6 +50,8 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
 	// Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+	
+	[Appirater appEnteredForeground:YES];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

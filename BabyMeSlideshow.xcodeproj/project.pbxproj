@@ -15,6 +15,14 @@
 		3401FFC917450BA70063A85F /* 144x144_mobile_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3401FFB6174508EE0063A85F /* 144x144_mobile_Icon.png */; };
 		3401FFCC17450C750063A85F /* home-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3401FFCA17450C750063A85F /* home-ipad.png */; };
 		3401FFCD17450C750063A85F /* home-ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3401FFCB17450C750063A85F /* home-ipad@2x.png */; };
+		34C4CDAD17450FE900DD99C6 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C4CDAB17450FE900DD99C6 /* Appirater.m */; };
+		34C4CDAE17450FE900DD99C6 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C4CDAB17450FE900DD99C6 /* Appirater.m */; };
+		34C4CDB01745113900DD99C6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C4CDAF1745113900DD99C6 /* StoreKit.framework */; };
+		34C4CDB21745115000DD99C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C4CDB11745115000DD99C6 /* SystemConfiguration.framework */; };
+		34C4CDB41745115500DD99C6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C4CDB31745115500DD99C6 /* CFNetwork.framework */; };
+		34C4CDB51745116600DD99C6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C4CDB31745115500DD99C6 /* CFNetwork.framework */; };
+		34C4CDB61745116C00DD99C6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C4CDAF1745113900DD99C6 /* StoreKit.framework */; };
+		34C4CDB71745117200DD99C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C4CDB11745115000DD99C6 /* SystemConfiguration.framework */; };
 		6925EB1616F0DAF600D6ED87 /* AboutViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6925EB1416F0DAC900D6ED87 /* AboutViewController~ipad.xib */; };
 		6925EB1816F0DB1500D6ED87 /* SettingsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6925EB1716F0DB1500D6ED87 /* SettingsViewController~ipad.xib */; };
 		6925EB1A16F0DB2900D6ED87 /* SlideshowViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6925EB1916F0DB2900D6ED87 /* SlideshowViewController~ipad.xib */; };
@@ -149,6 +157,12 @@
 		3401FFC317450B8B0063A85F /* default-background-ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-background-ipad@2x.png"; sourceTree = "<group>"; };
 		3401FFCA17450C750063A85F /* home-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-ipad.png"; sourceTree = "<group>"; };
 		3401FFCB17450C750063A85F /* home-ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-ipad@2x.png"; sourceTree = "<group>"; };
+		34C4CDAA17450FE900DD99C6 /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
+		34C4CDAB17450FE900DD99C6 /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
+		34C4CDAC17450FE900DD99C6 /* AppiraterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppiraterDelegate.h; sourceTree = "<group>"; };
+		34C4CDAF1745113900DD99C6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		34C4CDB11745115000DD99C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		34C4CDB31745115500DD99C6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6925EB1416F0DAC900D6ED87 /* AboutViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "AboutViewController~ipad.xib"; sourceTree = "<group>"; };
 		6925EB1716F0DB1500D6ED87 /* SettingsViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SettingsViewController~ipad.xib"; sourceTree = "<group>"; };
 		6925EB1916F0DB2900D6ED87 /* SlideshowViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SlideshowViewController~ipad.xib"; sourceTree = "<group>"; };
@@ -249,6 +263,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C4CDB71745117200DD99C6 /* SystemConfiguration.framework in Frameworks */,
+				34C4CDB61745116C00DD99C6 /* StoreKit.framework in Frameworks */,
+				34C4CDB51745116600DD99C6 /* CFNetwork.framework in Frameworks */,
 				69E41EEC16DBC0BE00C27C9D /* QuartzCore.framework in Frameworks */,
 				6959700416DAE1950021868B /* AssetsLibrary.framework in Frameworks */,
 				69596FC916DADE890021868B /* UIKit.framework in Frameworks */,
@@ -262,6 +279,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C4CDB41745115500DD99C6 /* CFNetwork.framework in Frameworks */,
+				34C4CDB21745115000DD99C6 /* SystemConfiguration.framework in Frameworks */,
+				34C4CDB01745113900DD99C6 /* StoreKit.framework in Frameworks */,
 				69D80C4216EFA5FB00AE451F /* AssetsLibrary.framework in Frameworks */,
 				69D80C4116EFA5F600AE451F /* QuartzCore.framework in Frameworks */,
 				69D80C2916EFA5DE00AE451F /* UIKit.framework in Frameworks */,
@@ -274,6 +294,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34C4CDA917450FE900DD99C6 /* Appirater */ = {
+			isa = PBXGroup;
+			children = (
+				34C4CDAA17450FE900DD99C6 /* Appirater.h */,
+				34C4CDAB17450FE900DD99C6 /* Appirater.m */,
+				34C4CDAC17450FE900DD99C6 /* AppiraterDelegate.h */,
+			);
+			path = Appirater;
+			sourceTree = "<group>";
+		};
 		69596FBC16DADE890021868B = {
 			isa = PBXGroup;
 			children = (
@@ -303,10 +333,13 @@
 			isa = PBXGroup;
 			children = (
 				6959700316DAE1950021868B /* AssetsLibrary.framework */,
+				34C4CDB31745115500DD99C6 /* CFNetwork.framework */,
 				69596FCC16DADE890021868B /* CoreGraphics.framework */,
 				69FB847E16E4202B00CA73F5 /* Crashlytics.framework */,
 				69596FCA16DADE890021868B /* Foundation.framework */,
 				69E41EEB16DBC0BE00C27C9D /* QuartzCore.framework */,
+				34C4CDAF1745113900DD99C6 /* StoreKit.framework */,
+				34C4CDB11745115000DD99C6 /* SystemConfiguration.framework */,
 				69596FC816DADE890021868B /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -361,6 +394,7 @@
 		69596FEB16DAE17A0021868B /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				34C4CDA917450FE900DD99C6 /* Appirater */,
 				69D80C4E16EFA7A300AE451F /* SVProgressHUD */,
 				69D80C5216EFA7A300AE451F /* WSAlbum */,
 			);
@@ -674,6 +708,7 @@
 				69D80C7316EFA7A300AE451F /* WSAssetViewColumn.m in Sources */,
 				69D80C7516EFA7A300AE451F /* WSAssetWrapper.m in Sources */,
 				69D80C7716EFA7A300AE451F /* WSPickerWithToolbar.m in Sources */,
+				34C4CDAD17450FE900DD99C6 /* Appirater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,6 +733,7 @@
 				69D80C7416EFA7A300AE451F /* WSAssetViewColumn.m in Sources */,
 				69D80C7616EFA7A300AE451F /* WSAssetWrapper.m in Sources */,
 				69D80C7816EFA7A300AE451F /* WSPickerWithToolbar.m in Sources */,
+				34C4CDAE17450FE900DD99C6 /* Appirater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

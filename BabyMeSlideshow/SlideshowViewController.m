@@ -46,6 +46,8 @@
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
     [longPress setMinimumPressDuration:2];
     [self.exitButton addGestureRecognizer:longPress];
+	
+	self.photoView.contentMode = UIViewContentModeScaleAspectFit;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
