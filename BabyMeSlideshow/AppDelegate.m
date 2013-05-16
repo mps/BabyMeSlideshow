@@ -16,7 +16,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		[Appirater setAppId:@"612532871"]; // iPad
+		[Appirater setAppId:@"649351064"]; // iPad
 	} else {
 		[Appirater setAppId:@"612532871"];
 	}
