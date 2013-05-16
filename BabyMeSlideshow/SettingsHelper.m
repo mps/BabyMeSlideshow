@@ -11,6 +11,9 @@
 #define KEY_FOR_PHOTO_DURATION @"BabyMeSlideshowPhotoDuration"
 #define KEY_FOR_FADE_DURATION @"BabyMeSlideshowFadeDuration"
 
+#define DEFAULT_PHOTO_DURATION 3.0f
+#define DEFAULT_FADE_DURATION 1.0f
+
 @implementation SettingsHelper
 
 + (float)getPhotoDuration {

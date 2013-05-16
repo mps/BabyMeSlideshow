@@ -15,20 +15,25 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[Appirater setAppId:@"612532871"]; // iPad
+	} else {
+		[Appirater setAppId:@"612532871"];
+	}
+	
+	[Appirater setUsesUntilPrompt:10];
+    
+	[Crashlytics startWithAPIKey:@"907acff10b7b639198aadbeb5eca1950ffbfb149"];
+	
 	[self applyStyleSheet];
-    
-    [Crashlytics startWithAPIKey:@"907acff10b7b639198aadbeb5eca1950ffbfb149"];
-    
-    [Appirater setAppId:@"612532871"];
-    [Appirater setUsesUntilPrompt:10];
 	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-	self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+	self.viewController = [[ViewController alloc] init];
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    
-    [Appirater appLaunched:YES];
+	
+	[Appirater appLaunched:YES];
     
     return YES;
 }
@@ -45,8 +50,8 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
 	// Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    
-    [Appirater appEnteredForeground:YES];
+	
+	[Appirater appEnteredForeground:YES];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

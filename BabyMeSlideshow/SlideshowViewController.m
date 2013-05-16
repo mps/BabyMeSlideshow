@@ -46,15 +46,17 @@
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
     [longPress setMinimumPressDuration:2];
     [self.exitButton addGestureRecognizer:longPress];
-    
-    self.photoView.contentMode = UIViewContentModeScaleAspectFit;
+	
+	self.photoView.contentMode = UIViewContentModeScaleAspectFit;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-    
-    self.exitButton.frame = EXIT_BUTTON_POSITION;
-    self.exitView.frame = EXIT_MESSAGE_POSITION;
+	
+	if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {    
+		self.exitButton.frame = EXIT_BUTTON_POSITION;
+		self.exitView.frame = EXIT_MESSAGE_POSITION;
+	}
     
     self.exitView.hidden = YES;
 	

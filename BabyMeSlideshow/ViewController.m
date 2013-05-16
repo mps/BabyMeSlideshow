@@ -41,7 +41,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (!IS_IPHONE_5_SCREEN) {
+    if (!IS_IPHONE_5_SCREEN && UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
         self.backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"home"]];
     }
 }
@@ -49,19 +49,23 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-	self.selectPhotosButton.frame = NEWSLIDESHOW_PRIMARY_POSITION;
-    self.showSettingsButton.frame = SETTINGS_PRIMARY_POSITION;
+	if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {	
+		self.selectPhotosButton.frame = NEWSLIDESHOW_PRIMARY_POSITION;
+		self.showSettingsButton.frame = SETTINGS_PRIMARY_POSITION;
+		self.aboutButton.frame = ABOUT_PRIMARY_POSITION;
+		
+		if ([self hasPhotos]) {
+			self.usePreviousPhotosButton.frame = USEPREVIOUS_PRIMARY_POSITION;
+		}
+	}
 	
 	if ([self hasPhotos]) {
 		self.usePreviousPhotosButton.hidden = NO;
-		self.usePreviousPhotosButton.frame = USEPREVIOUS_PRIMARY_POSITION;
 	} else {
 		self.usePreviousPhotosButton.hidden = YES;
 	}
 	
 	self.usePreviousPhotosButton.hidden = ![self hasPhotos];
-    
-    self.aboutButton.frame = ABOUT_PRIMARY_POSITION;
 }
 
 #pragma mark - Methods
