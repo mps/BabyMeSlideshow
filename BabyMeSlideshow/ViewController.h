@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "GAI.h"
+
+@interface ViewController : GAITrackedViewController
 
 - (IBAction)selectPhotosForSlideshow:(id)sender;
 

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SlideshowViewController : UIViewController
+#import "GAI.h"
+
+@interface SlideshowViewController : GAITrackedViewController
 
 - (id)initWithPhotos:(NSMutableArray *)photoUrls;
 

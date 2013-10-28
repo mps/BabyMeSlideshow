@@ -37,6 +37,12 @@
 	[self initializeSettings];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
+	
+	self.screenName = [NSString stringWithFormat:@"%@", self.class];
+}
+
 #pragma mark - Methods
 
 - (void)setupSliders {

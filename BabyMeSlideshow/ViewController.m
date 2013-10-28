@@ -68,6 +68,12 @@
 	self.usePreviousPhotosButton.hidden = ![self hasPhotos];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
+	
+	self.screenName = @"Home";
+}
+
 #pragma mark - Methods
 
 - (BOOL)hasPhotos {

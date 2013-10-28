@@ -21,6 +21,9 @@
 		[Appirater setAppId:@"612532871"];
 	}
 	
+	[GAI sharedInstance].dispatchInterval = 20;
+	[[GAI sharedInstance] trackerWithTrackingId:@"UA-28790814-7"];
+	
 	[Appirater setUsesUntilPrompt:10];
     
 	[Crashlytics startWithAPIKey:@"907acff10b7b639198aadbeb5eca1950ffbfb149"];

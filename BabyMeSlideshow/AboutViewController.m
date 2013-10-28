@@ -16,9 +16,10 @@
 
 @implementation AboutViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+- (void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
+	
+	self.screenName = [NSString stringWithFormat:@"%@", self.class];
 }
 
 - (IBAction)exitAbout:(id)sender {

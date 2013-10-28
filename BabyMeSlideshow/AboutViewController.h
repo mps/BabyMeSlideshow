@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AboutViewController : UIViewController
+#import "GAI.h"
+
+@interface AboutViewController : GAITrackedViewController
 
 - (IBAction)exitAbout:(id)sender;
 
